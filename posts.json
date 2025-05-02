@@ -1,0 +1,130 @@
+[
+  {
+    "title": "Thailand islands.",
+    "descpiption": "The Thailand islands are a dream destination for travelers worldwide. With crystal-clear waters, white sandy beaches, and lush jungles, these islands are a true paradise. Popular spots like Phuket, Koh Samui, and Koh Phi Phi attract tourists year-round. Beyond the parties and nightlife, visitors can experience snorkeling, diving, and kayaking in turquoise waters. Each island offers a unique charm: Koh Tao is famous for diving schools, while Koh Lipe is perfect for a peaceful retreat. Thai culture adds to the experience with delicious street food, friendly locals, and vibrant festivals. Many islands have eco-resorts, supporting sustainable travel. Whether you’re a backpacker or seeking luxury, Thailand’s islands offer something for everyone. Be sure to visit hidden gems like Koh Yao Noi for an authentic local experience. Sunsets here are breathtaking, making every evening magical. From adventure to relaxation, these islands promise unforgettable memories.",
+    "summary-description": "Thailand’s islands offer stunning beaches, clear waters, and vibrant culture. With activities like snorkeling and eco-tourism, they attract travelers seeking adventure or relaxation. Each island has its unique charm, making Thailand a must-visit destination.",
+    "date": "18.02.2019",
+    "img-cover": "https://c4.wallpaperflare.com/wallpaper/875/55/631/andaman-islands-wallpaper-preview.jpg",
+    "img-1": "https://5okean.com/admin/uploads/2020/01/tayland3.jpg",
+    "img-2": "https://ht.kz/fls/upload/%D0%BF%D1%85%D0%B8%20%D0%BF%D1%85%D0%B8.jpg",
+    "category": "Adventure",
+    "author": {
+        "name": "Oleksii",
+        "surname": "Nesterenko",
+        "avatar": "./public/images/oleksii.jpeg",
+        "profession": ["Tour Guide", "Junior Frontend Developer"]
+    } 
+  },
+  {
+    "title": "Traveling is a lifestyle.",
+    "descpiption": "Traveling is more than just moving from place to place — it’s a way of life. For many, it brings freedom, growth, and self-discovery. Traveling exposes you to new cultures, languages, and perspectives, enriching your worldview. It teaches flexibility and resilience as you navigate unfamiliar territories and overcome challenges. Whether you backpack across Europe, explore Asia, or road-trip in the U.S., each journey shapes who you are. Nomads and digital workers prove that work and travel can coexist beautifully. Memories from the road become life lessons, making you more open-minded and empathetic. Traveling also builds connections, turning strangers into friends. For many, the world becomes home, and adventure never ends. Living with minimalism, experiencing nature, and embracing uncertainty are key elements of this lifestyle. If you seek purpose, inspiration, or excitement, traveling offers all of these and more, transforming life into a constant adventure.",
+    "summary-description": "Traveling as a lifestyle offers freedom, growth, and endless adventure. It expands your worldview, builds resilience, and creates meaningful connections. From digital nomads to explorers, travelers embrace change, turning the world into their home.",
+    "date": "11.05.2021",
+    "img-cover": "https://newtheory.com/wp-content/uploads/2018/10/travel.jpg",
+    "img-1": "https://www.languagetrainers.com/blog/wp-content/uploads/2018/06/34933837826_5ae558647d_z.jpg",
+    "img-2": "https://5873592.fs1.hubspotusercontent-na1.net/hubfs/5873592/Blogs/Luxury%20Travel%20Lifestyle/Private%20resort%20pool.jpg",
+    "category" : ["Lifestyle", "Adventure"],
+        "author": {
+        "name": "Kateryna",
+        "surname": "Boichuk",
+        "avatar": "./public/images/kateryna.jpg",
+        "profession": ["Tour Manager"]
+    }
+  },
+  {
+    "title": "Ancient Turkey.",
+    "descpiption": "Ancient Türkiye holds countless wonders that reflect its rich and diverse past. As the heartland of empires like the Hittites, Byzantines, and Ottomans, Türkiye offers stunning historical sites. Ephesus, once a major Roman city, showcases grand theaters and temples. The fairy chimneys of Cappadocia hide ancient cave dwellings and churches. Troy, known from Homer’s epics, is another legendary destination. Istanbul, formerly Constantinople, bridges Europe and Asia with its magnificent Hagia Sophia and Topkapi Palace. Türkiye’s archaeological sites reveal layers of history, from Greek and Roman to Seljuk and Ottoman periods. Visiting these places transports you through centuries of culture, art, and architecture. Museums like the Anatolian Civilizations Museum in Ankara preserve artifacts from Türkiye’s rich heritage. Local traditions, crafts, and cuisine further enrich the experience. Exploring ancient Türkiye means walking through history, feeling connected to the past while enjoying breathtaking landscapes.",
+    "summary-description": "Ancient Türkiye showcases a rich history through sites like Ephesus, Cappadocia, and Troy. Its cultural heritage spans empires, offering travelers a deep connection to the past alongside stunning architecture, landscapes, and timeless local traditions.",
+    "date": "04.06.2020",
+    "img-cover": "https://idsb.tmgrup.com.tr/2014/11/22/HaberDetay/1416614576972.jpg",
+    "img-1": "https://bunny-wp-pullzone-nfqzsydbnl.b-cdn.net/wp-content/uploads/2020/01/Ancient-city-of-Myra.jpg",
+    "img-2": "https://images.ctfassets.net/159p56s120vn/r8IOVAm5vZeGtKUJlATsm/f5864fa4c1f483c52f3fa089c1e939cf/Ancient_ruins_in_the_ancient_city_of_Ephesus_in_Izmir__Turkey.jpg",
+    "category": ["History", "Adventure"],
+        "author": {
+        "name": "Oleksii",
+        "surname": "Nesterenko",
+        "avatar": "./public/images/oleksii.jpeg",
+        "profession": ["Tour Guide", "Junior Frontend Developer"]
+    }
+  },
+  {
+    "title": "Nature of the Andaman Sea.",
+    "descpiption": "The Andaman Sea is a spectacular natural wonder, renowned for its turquoise waters, coral reefs, and exotic marine life. Stretching between Myanmar, Thailand, and Malaysia, it’s home to breathtaking landscapes and rich biodiversity. The sea’s islands feature limestone cliffs, hidden lagoons, and pristine beaches. Coral reefs teem with colorful fish, sea turtles, and manta rays, making it a diving and snorkeling paradise. Mangroves and seagrass meadows support unique ecosystems, protecting coastlines and nurturing wildlife. The Andaman Sea’s monsoon climate shapes its seasons, with calm, clear waters during the dry season. Local communities rely on the sea for fishing and tourism, blending traditional livelihoods with conservation efforts. Protected areas, such as the Surin and Similan Islands, showcase nature’s beauty while promoting sustainable travel. Experiencing the Andaman Sea means immersing yourself in one of the world’s most stunning marine environments, where every moment feels magical.",
+    "summary-description": "The Andaman Sea dazzles with coral reefs, exotic wildlife, and stunning islands. It’s a paradise for divers and nature lovers, blending breathtaking beauty with rich biodiversity, while local conservation ensures this marine treasure thrives.",
+    "date": "10.12.2018",
+    "img-cover": "https://i0.wp.com/www.tielandtothailand.com/wp-content/uploads/2016/01/Koh-Rok.jpg?resize=1000%2C550&ssl=1",
+    "img-1": "https://www.andamantourism.org/wp-content/uploads/2024/05/Coral-Reefs-Andaman.jpg",
+    "img-2": "https://www.thainationalparks.com/img/poi/2020/01/07/394829/similan-island-rock-formation-w-900.jpg",
+    "category": ["Nature"],
+        "author": {
+        "name": "Maxim",
+        "surname": "Konovalov",
+        "avatar": "./public/images/maxim.jpg",
+        "profession": ["Writer", "Lawyer", "Tour Guide"]
+    }
+  },
+  {
+    "title": "Ukrainian rivers and forests.",
+    "descpiption": "Ukraine’s rivers and forests are natural treasures full of beauty and biodiversity. The Dnipro River, one of Europe’s longest, flows majestically through the country, providing water, transportation, and breathtaking views. The Southern Bug and Dniester rivers are also important, supporting wildlife and local communities. Ukraine’s forests, from the Carpathians to Polissya, are home to ancient oaks, pines, and beech trees. These landscapes offer shelter to bears, wolves, lynxes, and countless bird species. Nature lovers can explore national parks like Carpathian Biosphere Reserve or Shatsky National Nature Park, where pristine lakes meet dense woodlands. The rivers and forests are not just beautiful — they are vital for Ukraine’s ecology and culture. They inspire folklore, songs, and traditions, connecting people with the land. Today, conservation efforts aim to protect these natural wonders for future generations, ensuring they continue to thrive and enchant visitors from near and far.",
+    "summary-description": "Ukraine’s rivers and forests offer stunning landscapes, rich wildlife, and deep cultural ties. From the Dnipro River to the Carpathians, these natural treasures inspire conservation and adventure, inviting travelers to experience Ukraine’s unspoiled beauty.",
+    "date": "20.07.2021",
+    "img-cover": "https://images.squarespace-cdn.com/content/v1/657b302ad0d11e71b22b40c3/d4eaa98a-b29b-454d-9f92-83c157b77bf8/photo_1880.normal.jpg",
+    "img-1": "https://starapravda.com.ua/wp-content/uploads/2023/08/small-river-trees_181624-438.png",
+    "img-2": "https://starapravda.com.ua/wp-content/uploads/2023/08/landscape-with-pine-forests-mountains_661209-179.png",
+    "category": ["Nature"],
+        "author": {
+        "name": "Olga",
+        "surname": "Petruk",
+        "avatar": "./public/images/olga.jpeg",
+        "profession": ["Surveyor", "Photographer"]
+    }
+  },
+  {
+    "title": "Thai temples as a refuge from the hustle and bustle of the city.",
+    "descpiption": "Thai temples, or “wats,” are peaceful sanctuaries amid the urban chaos. Cities like Bangkok are famous for their energy, yet within their heart lie serene temples such as Wat Pho and Wat Arun. These sacred spaces offer travelers and locals a place to reflect, meditate, or simply rest. Ornate architecture, golden stupas, and detailed murals reflect centuries of devotion and artistry. The scent of incense, the sound of monks chanting, and the sight of devotees paying respects create an atmosphere of calm. Temples are not just religious centers but also cultural treasures, preserving Thai history and philosophy. Many welcome visitors to participate in meditation or listen to Buddhist teachings. Respectful behavior, like modest dress and quietness, is essential when visiting. Amid skyscrapers and street vendors, Thai temples remind us of life’s deeper, slower rhythms — offering a true escape from the city’s rush.",
+    "summary-description": "Thai temples offer peaceful sanctuaries amid bustling cities, blending art, spirituality, and history. Visitors can reflect, meditate, and experience authentic Thai culture, making temples a meaningful retreat from urban noise and fast-paced life.",
+    "date": "25.03.2025",
+    "img-cover": "https://res.klook.com/image/upload/q_85/c_fill,w_750/v1685414981/blog/knbrkqkn6sw1xy1kgn3l.jpg",
+    "img-1": "https://d1bv4heaa2n05k.cloudfront.net/user-images/1457534512059/shutterstock-196615610_main_1457534524214.jpeg",
+    "img-2": "https://skyticket.com/guide/wp-content/uploads/2017/12/shutterstock_227981773.jpg",
+    "category": ["Lifestyle", "History"],
+        "author": {
+        "name": "Valentyn",
+        "surname": "Kucheriuk",
+        "avatar": "./public/images/valentyn.jpg",
+        "profession": ["Historian", "Theologist", "Writer"]
+    }
+  },
+  {
+    "title": "The long-tailed monkey is not a pet.",
+    "descpiption": "The long-tailed monkey, or macaque, is a fascinating wild animal — but it should never be kept as a pet. Found across Southeast Asia, these intelligent creatures live in complex social groups and need space to roam. Sadly, some people capture macaques for entertainment or exotic pet trade, causing suffering and disrupting ecosystems. In captivity, monkeys often develop behavioral problems, health issues, and intense stress. They require specialized diets, mental stimulation, and social interaction, which are impossible to replicate in a home. Furthermore, macaques can carry diseases transmissible to humans, posing health risks. In the wild, they play an important role by dispersing seeds and maintaining forest health. Conservationists urge the public to appreciate these animals in their natural habitats, not in cages or chains. Respecting wild animals as they are — wild — ensures their well-being and helps preserve delicate ecosystems for future generations.",
+    "summary-description": "Long-tailed monkeys are wild animals, not pets. Keeping them in captivity causes harm and disrupts nature. Appreciating these intelligent creatures in their natural environment helps protect their health, ecosystems, and the delicate balance of wildlife.",
+    "date": "09.10.2022",
+    "img-cover": "https://static.wixstatic.com/media/bac465_072390ec21284a8fae13c33a632c59d4~mv2.jpg/v1/fill/w_800,h_800,al_c,q_85/MWG_150423-B0A1832DT_edited.jpg",
+    "img-1": "https://i.guim.co.uk/img/media/936cb826e8c24b5b3a68de390b645b0695f0efaa/0_379_4146_2488/master/4146.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=a371b8bbc38c2e6dc4124f2846fee989",
+    "img-2": "https://stories.uq.edu.au/news/2023/rising-monkey-and-pig-populations-pose-human-disease-risk/assets/fzfgPBOifZ/sci-zoonotic-wildlife-long-tailed-macaques-adobe-shorthand-2560x1475.jpg",
+    "category": ["Animals", "Nature"],
+        "author": {
+        "name": "Vadym",
+        "surname": "Skrypnyk",
+        "avatar": "./public/images/vadym.jpg",
+        "profession": ["Vet", "Photographer"]
+    }
+  },
+  {
+    "title": "I want to travel and work at the same time.",
+    "descpiption": "The dream of traveling while working is more achievable today than ever before. Digital nomads prove that with a laptop and Wi-Fi, the world becomes your office. From freelancing and remote jobs to online businesses, opportunities abound. Popular roles include writing, programming, graphic design, and teaching languages online. Traveling while working demands discipline, as balancing deadlines with sightseeing can be challenging. Coworking spaces and cafes worldwide support this lifestyle, offering internet and community. Managing time zones, budgeting, and maintaining productivity are key skills. Besides income, this lifestyle offers freedom, cultural immersion, and personal growth. You can wake up to a sunrise in Bali or finish a project overlooking the Alps. While romanticized on social media, it’s not always easy — but with planning and flexibility, it’s deeply rewarding. Traveling and working together let you live life to the fullest, blending passion and profession",
+    "summary-description": "Traveling while working offers freedom, adventure, and flexibility. With remote jobs and digital tools, you can explore the world while earning. Balancing work and travel takes discipline, but the rewards include cultural growth and unforgettable experiences.",
+    "date": "23.04.2024",
+    "img-cover": "https://blog.furnishedquarters.com/wp-content/uploads/2017/10/perfect-work-while-traveling.jpg",
+    "img-1": "https://www.theladders.com/wp-content/uploads/remote_work3_190515.jpg",
+    "img-2": "https://passportandplates.com/wp-content/uploads/2017/05/Cover-photo-working-online.jpeg",
+    "category": ["Lifestyle"],
+        "author": {
+        "name": "Maxim",
+        "surname": "Konovalov",
+        "avatar": "./public/images/maxim.jpg",
+        "profession": ["Writer", "Lawyer", "Tour Guide"]
+    }
+  }
+]

@@ -1,0 +1,42 @@
+@use "/src/scss/utils/variables.scss" as v;
+
+.post {
+
+&__cover {};
+
+&_img {};
+
+&__categories {};
+
+&__category {};
+
+&__date {};
+
+&__info {};
+
+&__title {};
+
+&__sub-description {};
+
+&__line {};
+
+// ---------------------Author----------------------
+&__author {};
+
+&__author-avatar {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    object-fit: cover;
+     
+};
+
+&__author-info {};
+
+&__author-name {};
+
+&__author-profession {};
+
+&__author-profession-info {};
+}

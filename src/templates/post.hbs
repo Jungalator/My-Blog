@@ -1,0 +1,28 @@
+{{#each this}}
+<li class="post">
+    <div class="post__cover">
+        <img class="post_img" src="{{img-cover}}" alt="cover img">
+        <div class="post__categories">
+            {{#each category}}
+            <button class="post__category">{{this}}</button>
+            {{/each}}
+        </div>
+    </div>
+    <span class="post__date">{{date}}</span>
+    <div class="post__info">
+        <h3 class="post__title">{{title}}</h3>
+        <p class="post__sub-description">{{sub-description}}</p>
+    </div>
+    <br class="post__line">
+    <div class="post__author">
+        <img class="post__author-avatar" src="{{author.avatar}}" alt="Author avatar">
+        <ul class="post__author-info">
+            <li class="post__author-name">By {{author.name}} {{author.surname}}</li>
+            <li class="post__author-profession">{{#each author.profession}}
+                <p class="post__author-profession-info">{{this}}</p>
+                {{/each}}
+            </li>
+        </ul>
+    </div>
+</li>
+{{/each}}
