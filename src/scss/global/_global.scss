@@ -1,1 +1,27 @@
-@use "/src/scss/utils/variables.scss" as v
+@use "/src/scss/utils/variables.scss" as v;
+
+* {
+box-sizing: border-box
+};
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.list{
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.active-nav {
+    padding-bottom: 6px;
+    border-bottom: 1px solid v.$active-item-color;
+}

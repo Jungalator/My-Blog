@@ -4,7 +4,11 @@
 
 &__cover {};
 
-&_img {};
+&_img {
+    width: 310px;
+    height: 280px;
+    object-fit: cover;
+};
 
 &__categories {};
 
@@ -24,8 +28,8 @@
 &__author {};
 
 &__author-avatar {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border: none;
     border-radius: 50%;
     object-fit: cover;

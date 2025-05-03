@@ -1,4 +1,4 @@
-import templateString from "../templates/post.hbs?raw";
+import templateString from "../partials/post.hbs?raw";
 import Handlebars from "handlebars";
 import postsJson from "../../posts.json";
 import "../scss/main.scss";

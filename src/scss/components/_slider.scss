@@ -1,0 +1,7 @@
+@use "../utils/variables.scss" as v;
+
+.slider {
+    width: 100vw;
+    height: 600px;
+    background-color: v.$slider-image-color;
+}

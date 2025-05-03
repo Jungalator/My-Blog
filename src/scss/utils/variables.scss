@@ -1,3 +1,24 @@
 //Screens: max-width - 767, min-width - 768, max-width  - 1199, min-width: 1200 
 // variables start from symbol - $  
-$main-color: black;
+
+//----------------ACTIVE PAGE AND FILTER-----------
+$active-item-color: #D4A373;
+$decor-color: #E5E5E5;
+$text-color: #6C757D;
+$dark-color: #343A40;
+$middle-dark-color: #495057;
+$image-background: #C4C4C4;
+$text-title-color: #fff;
+
+//----------------HEADER-------------------------
+$header-background-color: rgba(0, 0, 0, 0.20);
+
+$header-logo-color: #F8F9FA;
+
+//----------------POST SECTION-------------------
+$slider-category-background-color: rgba(255, 255, 255, 0.15);
+$slider-pagination-nonactive-color: rgba(255,255,255,0.20);
+$slider-image-color: #343A40;
+
+//----------------FOOTER SECTION-----------------
+$footer-background-color: #212529;
