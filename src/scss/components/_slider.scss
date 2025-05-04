@@ -1,7 +1,96 @@
 @use "../utils/variables.scss" as v;
 
 .slider {
-    width: 100vw;
-    height: 600px;
-    background-color: v.$slider-image-color;
+  width: 100vw;
+  height: 600px;
+  background-color: v.$slider-image-color;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    // display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    &.active {
+      display: inline-block;
+      transition: 1000ms ease-in-out;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__info-container {
+      position: absolute;
+      bottom: 140px;
+      left: 70px;
+      width: 530px;
+      height: 160px;
+    }
+
+    &__category {
+      width: 77px;
+      height: 22px;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: v.$text-title-color;
+      font-size: 10px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+
+      border: none;
+      border-radius: 10px;
+      background: v.$slider-category-background-color;
+    }
+
+    &__title {
+      color: v.$text-title-color;
+      font-size: 36px;
+      font-weight: 500;
+      margin: 15px 0 15px 0;
+    }
+
+    &__text {
+      font-size: 12px;
+      color: v.$text-title-color;
+      margin: 0;
+    }
+  }
+
+  .text__line {
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 70px;
+    left: 70px;
+    width: 44px;
+  }
+
+  &__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: v.$slider-pagination-nonactive-color;
+    cursor: pointer;
+  }
+
+  &__dot.active {
+    background-color: v.$text-title-color;
+    transition: 250ms ease-in-out;
+  }
 }

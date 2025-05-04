@@ -8,8 +8,17 @@
   </head>
   <body>
     {{> header }}
-    <section class="slider">{{> slider}}</section>
+    <section class="slider">
+      <div class="slider__container" data-slider-container>
+        <div class="slider__dots">
+          <span class="slider__dot"></span>
+          <span class="slider__dot"></span>
+          <span class="slider__dot"></span>
+        </div>
+      </div>
+    </section>
 
+    <!-- <script type="module" src="/src/js/slider/slider.js"></script> -->
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

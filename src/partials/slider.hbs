@@ -1,3 +1,12 @@
-<div class="slider__container" data-slider-container>
-
+<div class="slide" data-slide-elem>
+    <img src="{{img-cover}}" alt="Slide cover" class="slide__img">
+    <div class="slide__info-container">
+        <div class="slide__category">
+            {{#each category}}
+            {{this}}
+            {{/each}}
+            </div>
+        <h3 class="slide__title">{{title}}</h3>
+        <p class="slide__text"> {{date}} <span class="text__line"></span> {{descpiption-cover}}</p>
+    </div>
 </div>

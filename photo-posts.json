@@ -1,6 +1,7 @@
 [
   {
     "title": "Bogdan Amosov pictures of mountains and lake",
+    "descpiption-cover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
     "descpiption": "",
     "date": "",
     "category": ["Adventure"],
@@ -9,7 +10,7 @@
   },
   {
     "title": "Olena Volkova space around us",
-    "descpiption-cover": "",
+    "descpiption-cover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
     "descpiption": "",
     "date": "",
     "category": ["Space"],
@@ -18,6 +19,7 @@
   },
   {
     "title": "Victor Bagryanyi two diferent world's with same nature",
+     "descpiption-cover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
     "descpiption": "",
     "date": "",
     "category": ["Urban", "Nature"],
@@ -26,6 +28,7 @@
   },
   {
     "title": "Rinata Akipova mystical nature between us ",
+     "descpiption-cover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
     "descpiption": "",
     "date": "",
     "category": ["Nature"],
@@ -34,6 +37,7 @@
   },
   {
     "title": "Dmytro Skarenko urban life with natural heaven",
+     "descpiption-cover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
     "descpiption": "",
     "date": "",
     "category": ["Urban"],

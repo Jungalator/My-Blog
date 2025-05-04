@@ -1,16 +1,4 @@
-import templateString from "../partials/post.hbs?raw";
-import Handlebars from "handlebars";
-import postsJson from "../../posts.json";
+"use strict";
 import "../scss/main.scss";
-
-const template = Handlebars.compile(templateString);
-const html = template(postsJson);
-
-document.body.insertAdjacentHTML(
-  "beforeend",
-  `
-    <ul>
-    ${html}
-    </ul>
-    `
-);
+import posts from "./posts/posts";
+import slider from "./slider/slider";
