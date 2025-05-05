@@ -5,20 +5,26 @@ import {
   getItemLocalStorage,
   setItemLocalStorage,
 } from "../localStorage/localStorage.js";
+import renderFilterButton from "./filterButtons.js";
+const template = Handlebars.compile(templateString);
+const postsArr = [];
+postsArr.push(...postsJson);
+const posts = document.querySelector(".posts");
 
+//=======================================
 const renderPosts = () => {
-  const template = Handlebars.compile(templateString);
-
-  setItemLocalStorage("posts", postsJson);
+  setItemLocalStorage("posts", postsArr);
   const html = template(getItemLocalStorage("posts"));
 
-  return document.body.insertAdjacentHTML(
+  posts.insertAdjacentHTML(
     "beforeend",
     `
-    <ul>
+    <ul class="posts__list list">
     ${html}
     </ul>
     `
   );
 };
 export default renderPosts();
+
+//=================================

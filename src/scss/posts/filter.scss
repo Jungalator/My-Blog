@@ -1,0 +1,10 @@
+@use "/src/scss/utils/variables.scss" as v;
+
+.posts {
+  &__filter-container {
+  }
+
+  &__filter-list {
+    display: flex;
+  }
+}

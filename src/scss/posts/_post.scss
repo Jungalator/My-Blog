@@ -1,46 +1,71 @@
 @use "/src/scss/utils/variables.scss" as v;
 
+.posts__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 70px;
+}
+
 .post {
+  width: 260px;
+  height: 565px;
+  position: relative;
+  &__cover {
+  }
 
-&__cover {};
-
-&_img {
-    width: 310px;
-    height: 280px;
+  &_img {
+    width: 100%;
+    height: 260px;
     object-fit: cover;
-};
+    margin: 0 0 20px 0;
+  }
 
-&__categories {};
+  &__categories {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
-&__category {};
+  &__category {
+  }
 
-&__date {};
+  &__date {
+  }
 
-&__info {};
+  &__info {
+  }
 
-&__title {};
+  &__title {
+  }
 
-&__sub-description {};
+  &__sub-description {
+  }
 
-&__line {};
+  &__line {
+  }
 
-// ---------------------Author----------------------
-&__author {};
+  // ---------------------Author----------------------
+  &__author {
+  }
 
-&__author-avatar {
+  &__author-avatar {
     width: 50px;
     height: 50px;
     border: none;
     border-radius: 50%;
     object-fit: cover;
-     
-};
+  }
 
-&__author-info {};
+  &__author-info {
+  }
 
-&__author-name {};
+  &__author-name {
+  }
 
-&__author-profession {};
+  &__author-profession {
+  }
 
-&__author-profession-info {};
+  &__author-profession-info {
+  }
 }
