@@ -1,52 +1,102 @@
 @use "/src/scss/utils/variables.scss" as v;
 
-.posts__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.posts {
   padding: 0 70px;
+
+  &__title {
+    margin: 0 0 30px 0;
+    color: v.$middle-dark-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+  }
 }
 
 .post {
   width: 260px;
   height: 565px;
   position: relative;
-  &__cover {
-  }
+  background-color: #fff;
+  margin: 0 0 50px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  //   &__cover {
+  //   }
 
   &_img {
     width: 100%;
     height: 260px;
     object-fit: cover;
     margin: 0 0 20px 0;
+    filter: brightness(70%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
 
   &__categories {
     position: absolute;
-    top: 0;
-    left: 0;
-  }
+    top: 20px;
+    right: 20px;
+    list-style: none;
+    display: flex;
+    padding: 0;
 
-  &__category {
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      padding: 6px;
+      background: v.$slider-category-background-color;
+      color: v.$text-title-color;
+      border: none;
+      border-radius: 10px;
+      font-family: v.$categories-font-family;
+      font-size: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
   }
 
   &__date {
+    display: inline-block;
+    font-size: 12px;
+    color: v.$text-color;
+    margin: 0 0 15px 0;
   }
 
   &__info {
+    padding: 0 20px;
   }
 
   &__title {
+    color: v.$middle-dark-color;
+    font-size: 18px;
+    margin: 0 0 15px 0;
   }
 
   &__sub-description {
+    color: v.$text-color;
+    font-size: 12px;
+    margin: 0 0 20px 0;
   }
 
   &__line {
+    width: 85%;
+    border: none;
+    height: 1px;
+    background-color: v.$decor-color;
+    margin: 0 auto 20px;
   }
-
   // ---------------------Author----------------------
   &__author {
+    display: flex;
+    align-items: flex-end;
   }
 
   &__author-avatar {
@@ -58,14 +108,26 @@
   }
 
   &__author-info {
+    padding: 0;
+    margin: 0 0 0 17px;
+    height: 40px;
   }
 
   &__author-name {
+    font-size: 12px;
+    color: v.$middle-dark-color;
+    font-weight: bold;
+    margin: 0 0 10px 0;
   }
 
   &__author-profession {
+    display: flex;
   }
 
   &__author-profession-info {
+    font-size: 12px;
+    margin: 0;
+    color: v.$text-color;
+    margin: 0 5px 0 0;
   }
 }

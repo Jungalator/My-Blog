@@ -1,10 +1,5 @@
-import templateString from "../../partials/post.hbs?raw";
-import Handlebars, { log } from "handlebars";
 import postsJson from "../../../posts.json";
-import {
-  getItemLocalStorage,
-  setItemLocalStorage,
-} from "../localStorage/localStorage.js";
+
 const postsSection = document.querySelector(".posts");
 
 const filterButtonsContainer = document.createElement("div");
@@ -14,17 +9,22 @@ const filterButtonsList = document.createElement("ul");
 filterButtonsList.className = "posts__filter-list";
 filterButtonsList.classList.add("list");
 
+const allCategoriesBtn = document.createElement("button");
+allCategoriesBtn.className = "posts__filter-btn";
+allCategoriesBtn.dataset.allCategoriesBtn = "";
+allCategoriesBtn.textContent = "All";
+filterButtonsList.prepend(allCategoriesBtn);
+
 const postsArr = [];
 postsArr.push(...postsJson);
 
 function renderFilterButton() {
   let newArr = [...new Set(postsArr.flatMap((element) => element.category))];
-  newArr.push("All");
   newArr.forEach((item) => {
     filterButtonsList.insertAdjacentHTML(
-      "afterbegin",
+      "beforeend",
       `
-        <li><button>${item}</button></li>
+        <li class="posts__filter-item"><button class="posts__filter-btn">${item}</button></li>
         `
     );
   });

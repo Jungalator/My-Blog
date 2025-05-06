@@ -2,7 +2,7 @@
 
 .slider {
   width: 100vw;
-  height: 600px;
+  height: 100vh;
   background-color: v.$slider-image-color;
   margin: 0 0 150px 0;
 
@@ -39,21 +39,20 @@
     }
 
     &__category {
-      width: 77px;
-      height: 22px;
+      width: 95px;
+      height: 25px;
       padding: 3px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: v.$text-title-color;
-      font-size: 10px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-        sans-serif;
-
       border: none;
       border-radius: 10px;
       background: v.$slider-category-background-color;
+      color: v.$text-title-color;
+      font-size: 10px;
+      font-family: v.$categories-font-family;
+      font-weight: bold;
+      text-transform: uppercase;
     }
 
     &__title {

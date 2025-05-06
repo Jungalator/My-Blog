@@ -1,27 +1,28 @@
 @use "/src/scss/utils/variables.scss" as v;
 
 * {
-box-sizing: border-box
-};
-
-body{
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
 }
 
-.list{
-    list-style: none;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.list {
+  list-style: none;
 }
 
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .is-hidden {
-    display: none;
+  display: none;
 }
 
 .active-nav {
-    padding-bottom: 6px;
-    border-bottom: 1px solid v.$active-item-color;
+  padding-bottom: 6px;
+  border-bottom: 1px solid v.$active-item-color;
 }

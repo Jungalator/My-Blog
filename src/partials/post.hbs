@@ -1,28 +1,34 @@
 {{#each this}}
 <li class="post">
     <div class="post__cover">
-        <img class="post_img" src="{{img-cover}}" alt="cover img">
-        <div class="post__categories">
+        
+        <img class="post_img"  src="{{img-cover}}"  alt="Image cover">
+        
+        {{!-- <img class="post_img" src=""  alt="No avatar"> --}}
+        
+        <ul class="post__categories">
             {{#each category}}
-            <button class="post__category">{{this}}</button>
+            <li class="post__categories-item">{{this}}</li>
             {{/each}}
-        </div>
+        </ul>
     </div>
-    <span class="post__date">{{date}}</span>
     <div class="post__info">
+    <span class="post__date">{{date}}</span>
+   
         <h3 class="post__title">{{title}}</h3>
-        <p class="post__sub-description">{{sub-description}}</p>
-    </div>
-    <br class="post__line">
+        <p class="post__sub-description">{{sub-description}} </p>
+   
+    <hr class="post__line">
     <div class="post__author">
-        <img class="post__author-avatar" src="{{author.avatar}}" alt="Author avatar">
-        <ul class="post__author-info">
+        <img class="post__author-avatar" src="{{#if author.avatar}} {{author.avatar}} {{else}} ../../public/images/no-avatar.png {{/if}}" alt="Author avatar">
+        <ul class="post__author-info list">
             <li class="post__author-name">By {{author.name}} {{author.surname}}</li>
             <li class="post__author-profession">{{#each author.profession}}
                 <p class="post__author-profession-info">{{this}}</p>
                 {{/each}}
             </li>
         </ul>
+    </div>
     </div>
 </li>
 {{/each}}
