@@ -15,6 +15,7 @@
     align-items: center;
     justify-content: space-between;
   }
+
   &__tools-container {
     display: flex;
     align-items: center;
@@ -33,6 +34,7 @@
 
   .nav {
     margin: 0 17px;
+
     &__list {
       display: flex;
       width: 240px;
@@ -71,6 +73,16 @@
     }
 
     &__svg {
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .nav {
+      display: none;
+    }
+
+    .social {
+      display: none;
     }
   }
 }

@@ -9,11 +9,15 @@ const filterButtonsList = document.createElement("ul");
 filterButtonsList.className = "posts__filter-list";
 filterButtonsList.classList.add("list");
 
+const filterAllItem = document.createElement("li");
+filterAllItem.className = "posts__filter-item";
+
 const allCategoriesBtn = document.createElement("button");
 allCategoriesBtn.className = "posts__filter-btn";
 allCategoriesBtn.dataset.allCategoriesBtn = "";
 allCategoriesBtn.textContent = "All";
-filterButtonsList.prepend(allCategoriesBtn);
+filterAllItem.prepend(allCategoriesBtn);
+filterButtonsList.prepend(filterAllItem);
 
 const postsArr = [];
 postsArr.push(...postsJson);

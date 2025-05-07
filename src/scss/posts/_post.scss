@@ -9,10 +9,17 @@
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
+
     padding: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .posts {
+    padding: 0 20px;
   }
 }
 
@@ -25,8 +32,9 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  //   &__cover {
-  //   }
+  &__cover {
+    width: 260px;
+  }
 
   &_img {
     width: 100%;

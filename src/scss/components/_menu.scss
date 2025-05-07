@@ -1,0 +1,109 @@
+@use "/src/scss/utils/variables.scss" as v;
+
+@media (min-width: 1024px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu {
+  &__button {
+    position: absolute;
+    z-index: 80;
+    width: 30px;
+    height: 30px;
+    top: 30%;
+    right: 25%;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background: none;
+    border: none;
+  }
+  &__button-line {
+    width: 28px;
+    height: 2px;
+    background-color: v.$text-title-color;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 145px 0 0 0;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+    width: 100vw;
+    height: 100vh;
+    background: v.$footer-background-color;
+  }
+  &__list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 50px 0;
+  }
+
+  &__item {
+    margin: 0 0 40px 0;
+  }
+
+  &__link {
+    color: v.$header-logo-color;
+    font-size: 1.25rem;
+  }
+
+  &__social-list {
+    display: flex;
+    margin: 0;
+    justify-content: space-evenly;
+    padding: 0;
+    width: 100vw;
+  }
+}
+
+.line-top {
+  position: absolute;
+  top: 25px;
+  -webkit-animation: menutopstart 0.5s forwards;
+  animation: menutopstart 0.5s forwards;
+}
+
+.line-center {
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.2s ease-in-out 0.2s;
+  transition: opacity 0.2s ease-in-out 0.2s;
+}
+
+.line-bottom {
+  position: absolute;
+  bottom: 23px;
+  -webkit-animation: menubottomstart 0.5s forwards;
+  animation: menubottomstart 0.5s forwards;
+}
+
+.js-home__link {
+}
+.js-about__link {
+}
+.js-articles__link {
+}
+.js-contact__link {
+}
+
+.menu-active {
+  transform: translateY(0);
+}
+
+.block-scroll {
+  overflow: hidden;
+}

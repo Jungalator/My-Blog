@@ -4,11 +4,12 @@ import { getItemLocalStorage } from "../localStorage/localStorage.js";
 
 const postsJson = getItemLocalStorage("posts");
 const postsList = document.querySelector(".posts__list");
+
 const filterBtnsList = document.querySelector(".posts__filter-list");
 const filterBtns = document.querySelectorAll(".posts__filter-btn");
-const allCategoriesBtn = document.querySelector("[data-all-categories-btn]");
 
 const template = Handlebars.compile(templateString);
+console.log(filterBtns);
 
 filterBtns[0].classList.add("active-filter");
 
