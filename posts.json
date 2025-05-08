@@ -12,7 +12,7 @@
     "author": {
         "name": "Oleksii",
         "surname": "Nesterenko",
-        "avatar": "public/images/oleksii.jpeg",
+        "avatar": "images/oleksii.jpeg",
         "profession": ["Tour Guide", "Junior Frontend Developer"]
     } 
   },
@@ -29,7 +29,7 @@
         "author": {
         "name": "Kateryna",
         "surname": "Boichuk",
-        "avatar": "public/images/kateryna.jpg",
+        "avatar": "images/kateryna.jpg",
         "profession": ["Tour Manager"]
     }
   },
@@ -46,7 +46,7 @@
         "author": {
         "name": "Oleksii",
         "surname": "Nesterenko",
-        "avatar": "public/images/oleksii.jpeg",
+        "avatar": "images/oleksii.jpeg",
         "profession": ["Tour Guide", "Junior Frontend Developer"]
     }
   },
@@ -63,7 +63,7 @@
         "author": {
         "name": "Maxim",
         "surname": "Konovalov",
-        "avatar": "public/images/maxim.jpg",
+        "avatar": "images/maxim.jpg",
         "profession": ["Writer", "Lawyer", "Tour Guide"]
     }
   },
@@ -80,7 +80,7 @@
         "author": {
         "name": "Olga",
         "surname": "Petruk",
-        "avatar": "public/images/olga.jpg",
+        "avatar": "images/olga.jpg",
         "profession": ["Surveyor", "Photographer"]
     }
   },
@@ -97,7 +97,7 @@
         "author": {
         "name": "Valentyn",
         "surname": "Kucheriuk",
-        "avatar": "public/images/valentyn.jpg",
+        "avatar": "images/valentyn.jpg",
         "profession": ["Historian", "Theologist", "Writer"]
     }
   },
@@ -114,7 +114,7 @@
         "author": {
         "name": "Vadym",
         "surname": "Skrypnyk",
-        "avatar": "public/images/vadym.jpg",
+        "avatar": "images/vadym.jpg",
         "profession": ["Vet", "Photographer"]
     }
   },
@@ -131,7 +131,7 @@
         "author": {
         "name": "Maxim",
         "surname": "Konovalov",
-        "avatar": "public/images/maxim.jpg",
+        "avatar": "images/maxim.jpg",
         "profession": ["Writer", "Lawyer", "Tour Guide"]
     }
   }
