@@ -10,6 +10,7 @@
   font-size: 12px;
 
   &__container {
+    padding: 0 70px;
     height: 80px;
     display: flex;
     align-items: center;
@@ -23,7 +24,7 @@
   }
 
   &__logo {
-    margin: 0 100px 0 20px;
+    margin: 0 100px 0 0;
   }
 
   &__logo-name {
@@ -47,19 +48,41 @@
 
     &__link {
       color: v.$decor-color;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .header {
+      &__container {
+        padding: 0 20px;
+      }
+    }
+    .nav {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .social {
+      display: none;
     }
   }
 
   .social {
-    display: flex;
     height: 20px;
-    width: 172px;
+    width: 206px;
+    cursor: pointer;
 
     &__list {
       display: flex;
-      height: 20px;
-      width: 172px;
+      justify-content: space-evenly;
       margin: 0;
+      padding: 0;
+      height: 20px;
+      width: 100%;
+      border-left: 1px solid v.$decor-color;
+      border-right: 1px solid v.$decor-color;
     }
 
     &__item {
@@ -68,21 +91,12 @@
     }
 
     &__link {
-      width: 20px;
-      height: 20px;
     }
 
     &__svg {
-    }
-  }
-
-  @media (max-width: 1024px) {
-    .nav {
-      display: none;
-    }
-
-    .social {
-      display: none;
+      width: 20px; /* или нужный размер */
+      height: 20px;
+      fill: currentColor; /* чтобы наследовался цвет текста */
     }
   }
 }
@@ -100,8 +114,33 @@
 }
 
 .search {
+  margin: 0 0 0 17px;
   &__input-btn {
-    margin: 0 17px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: no-repeat;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+  @media (max-width: 1024px) {
+    .search {
+      &__input-btn {
+        height: 30px;
+        width: 30px;
+      }
+      &__svg {
+        width: 30px;
+        height: 30px;
+        fill: currentColor;
+      }
+    }
   }
 
   &__form {

@@ -8,6 +8,8 @@ const postsList = document.querySelector(".posts__list");
 const filterBtnsList = document.querySelector(".posts__filter-list");
 const filterBtns = document.querySelectorAll(".posts__filter-btn");
 
+const allCategoriesBtn = document.querySelector("[data-all-categories-btn]");
+
 const template = Handlebars.compile(templateString);
 console.log(filterBtns);
 

@@ -8,4 +8,6 @@ export default defineConfig({
       partialDirectory: "src/partials",
     }),
   ],
+  imagePath: "./public/images",
+  svgSpritePath: "./public/favicon/sprites.svg",
 });
