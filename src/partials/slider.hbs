@@ -1,17 +1,20 @@
 <div class="slide" data-slide-elem>
-    {{#if img-cover}}
-    <img src="{{img-cover}}" alt="Slide cover" class="slide__img">
-    {{/if}}
-    <div class="slide__info-container">
-        <div class="slide__category">
-            {{#each category}}
-            {{this}}
-            {{/each}}
-            </div>
-        <h3 class="slide__title">{{title}}</h3>
-        <p>{{date}}</p>
-        <hr class="text__line">
-        <p class="slide__text">  {{descpiption-cover}}</p>
+  {{#if imgCover}}
+    <img src="{{imgCover}}" alt="Slide cover" class="slide__img" />
+  {{/if}}
+  <div class="slide__info-container">
+    <div class="slide__category">
+      {{#each category}}
+        {{this}}
+      {{/each}}
     </div>
- 
+    <h3 class="slide__title">{{title}}</h3>
+    <div class="slide__text-container">
+      <p class="slide__date">{{date}}</p>
+      <hr class="text__line" />
+      <p class="slide__text">{{descriptionCover}}</p>
+    </div>
+
+  </div>
+
 </div>

@@ -1,9 +1,11 @@
 @forward "/src/scss/utils/variables.scss";
 @forward "/src/scss/global/global.scss";
-@forward "/src/scss/posts/filter.scss";
-@forward "/src/scss/posts/post.scss";
+@forward "/src/scss/sections/posts/filter.scss";
+@forward "/src/scss/sections/posts/post.scss";
 @forward "/src/scss/components/container.scss";
 @forward "/src/scss/components/header.scss";
-@forward "/src/scss/components/slider";
+@forward "/src/scss/sections/slider/slider.scss";
 @forward "/src/scss/components/menu.scss";
+@forward "/src/scss/sections/photoPost/photoPost.scss";
+@forward "/src/scss/sections/editorsPick/editorsPick.scss";
 @forward "/src/scss/components/footer.scss";

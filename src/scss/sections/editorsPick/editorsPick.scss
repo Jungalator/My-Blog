@@ -1,0 +1,124 @@
+@use "../../utils/variables.scss" as v;
+
+.editors-pick {
+  width: 100vw;
+  height: 60vh;
+  padding: 0 20px;
+
+  &__title-section {
+    margin: 0 0 40px 0;
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  &__items {
+    max-width: 420px;
+    height: 35vh;
+    position: relative;
+  }
+
+  &__img {
+    object-fit: cover;
+    filter: brightness(70%);
+    width: 100%;
+    height: 100%;
+  }
+  &__info-container {
+    position: absolute;
+    top: 60%;
+    width: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    height: 25px;
+    padding: 0.3em;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    border-radius: 10px;
+    background: v.$slider-category-background-color;
+    color: v.$text-title-color;
+    font-size: 0.625rem;
+    font-family: v.$categories-font-family;
+    text-transform: uppercase;
+  }
+  &__title {
+    color: v.$text-title-color;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 15px 0 7px 0;
+  }
+  &__date {
+    display: inline-block;
+    margin: 0;
+    font-size: 0.75rem;
+    color: v.$decor-color;
+    margin: 0 10px 0 0;
+  }
+
+  &__description-cover {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: v.$decor-color;
+  }
+  @media (max-width: 900px) {
+    height: 90vh;
+    &__container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__items {
+      max-width: 620px;
+      margin: 0 0 50px 0;
+    }
+  }
+
+  @media (max-width: 460px) {
+    &__container {
+      height: 70vh;
+    }
+    &__category {
+      padding: 0.2rem;
+      width: 55px;
+      height: 15px;
+      font-weight: 400;
+      font-size: 0.5rem;
+    }
+    &__info-container {
+      position: absolute;
+      top: 60%;
+      width: 85%;
+    }
+    &__date {
+      font-size: 0.6rem;
+    }
+    &__title {
+      font-size: 1rem;
+      margin: 10px 0 10px 0;
+    }
+    &__description-cover {
+      font-size: 0.6rem;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .editors-pick {
+    &__title-section {
+      margin: 0 0 70px 0;
+    }
+  }
+}

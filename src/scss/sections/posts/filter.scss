@@ -1,14 +1,12 @@
-@use "/src/scss/utils/variables.scss" as v;
+@use "../../utils/variables.scss" as v;
 
 .posts {
   &__filter-container {
     width: 100%;
-    // overflow: scroll;
     margin: 0 0 30px 0;
   }
-  @media screen and (max-width: 401px) {
+  @media (max-width: 401px) {
     &__filter-container {
-      transform: translateY(5px);
       box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
       border: none;
       border-radius: 5px;
@@ -19,16 +17,17 @@
       overflow-x: scroll;
     }
   }
-  @media (min-width: 460px) {
-    // &__filter-container {
-    //   overflow: auto;
-    // }
-  }
+  // @media (min-width: 460px) {
+  //   // &__filter-container {
+  //   //   overflow: auto;
+  //   // }
+  // }
 
   &__filter-list {
     display: flex;
     padding: 0;
     margin: 0;
+    width: 100%;
   }
   &__filter-item {
     // width: 70px;

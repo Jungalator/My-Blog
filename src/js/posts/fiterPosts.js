@@ -11,7 +11,6 @@ const filterBtns = document.querySelectorAll(".posts__filter-btn");
 const allCategoriesBtn = document.querySelector("[data-all-categories-btn]");
 
 const template = Handlebars.compile(templateString);
-console.log(filterBtns);
 
 filterBtns[0].classList.add("active-filter");
 

@@ -5,7 +5,8 @@ import {
   getItemLocalStorage,
   setItemLocalStorage,
 } from "../localStorage/localStorage.js";
-import renderFilterButton from "./renderFilterButtons.js";
+import renderFilterButtons from "./renderFilterButtons.js";
+
 const template = Handlebars.compile(templateString);
 const postsArr = [];
 postsArr.push(...postsJson);

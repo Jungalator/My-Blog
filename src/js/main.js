@@ -4,3 +4,5 @@ import menu from "./hader/menu";
 import posts from "./posts/posts";
 import slider from "./slider/slider";
 import filterPosts from "./posts/fiterPosts";
+import photoPost from "./photoPost/renderPhotoPost";
+import renderEditorsPick from "./editorsPick/renderEditorsPick";

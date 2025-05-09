@@ -1,0 +1,69 @@
+@use "../../utils/variables.scss" as v;
+
+.photo {
+  margin: 0 0 70px 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #343a40;
+
+  &__post-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+  }
+  &__img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 0 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  &__category {
+    width: 95px;
+    height: 25px;
+    padding: 0.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 0.625rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    text-transform: uppercase;
+  }
+  &__title {
+    color: #fff;
+    font-size: 2.25rem;
+    font-weight: 500;
+    margin: 15px 0 15px 0;
+  }
+  &__date {
+    font-size: 0.81rem;
+    color: v.$decor-color;
+  }
+  &__decor-line {
+    width: 30px;
+  }
+  &__description-cover {
+    font-size: 0.81rem;
+    color: #e5e5e5;
+    margin: 0;
+  }
+}

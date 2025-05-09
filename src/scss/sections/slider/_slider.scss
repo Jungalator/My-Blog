@@ -1,4 +1,4 @@
-@use "../utils/variables.scss" as v;
+@use "../../utils/variables.scss" as v;
 
 .slider {
   width: 100vw;
@@ -42,18 +42,14 @@
         position: absolute;
         bottom: 140px;
         left: 70px;
-        max-width: 530px;
+        max-width: 715px;
       }
     }
-
-    //     @media (min-width: 460px) {
-    //   &__info-container {
-    //     position: absolute;
-    //     bottom: 140px;
-    //     left: 70px;
-    //     max-width: 530px;
-    //   }
-    // }
+    @media (min-height: 320px) and (max-height: 401px) {
+      &__info-container {
+        bottom: 60px;
+      }
+    }
 
     &__category {
       width: 95px;
@@ -68,7 +64,6 @@
       color: v.$text-title-color;
       font-size: 0.625rem;
       font-family: v.$categories-font-family;
-      font-weight: bold;
       text-transform: uppercase;
     }
 
@@ -79,15 +74,30 @@
       margin: 15px 0 15px 0;
     }
 
+    &__text-container {
+      display: flex;
+      align-items: center;
+    }
+
     &__text {
-      font-size: 0.75rem;
+      display: inline-block;
+      font-size: 0.81rem;
       color: v.$decor-color;
+      margin: 0 0 0 10px;
+    }
+    &__date {
+      display: inline-block;
       margin: 0;
+      font-size: 0.81rem;
+      color: v.$decor-color;
+      margin: 0 10px 0 0;
     }
   }
 
   .text__line {
     width: 30px;
+    display: inline-block;
+    margin: 0;
   }
 
   &__dots {
@@ -110,5 +120,21 @@
   &__dot.active {
     background-color: v.$text-title-color;
     transition: 250ms ease-in-out;
+  }
+
+  @media (max-width: 401px) {
+    &__dots {
+      width: 80px;
+    }
+    &__dot {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  @media (min-height: 320px) and (max-height: 401px) {
+    &__dots {
+      bottom: 30px;
+    }
   }
 }

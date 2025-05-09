@@ -1,47 +1,47 @@
 [
   {
     "title": "Bogdan Amosov pictures of mountains and lake",
-    "descpiption-cover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
+    "descriptionCover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
     "descpiption": "",
-    "date": "",
+    "date": "12.10.2021",
     "category": ["Adventure"],
-    "img-cover": "https://kartinka.top/images/14/285-3440x1440-kartinka-top.jpg",
+    "imgCover": "https://kartinka.top/images/14/285-3440x1440-kartinka-top.jpg",
     "img": ["https://kartinka.top/images/14/285-3440x1440-kartinka-top.jpg", "https://kartinka.top/images/14/305-3440x1440-kartinka-top.jpg"]
   },
   {
     "title": "Olena Volkova space around us",
-    "descpiption-cover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
+    "descriptionCover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
     "descpiption": "",
-    "date": "",
+    "date": "09.08.2022",
     "category": ["Space"],
-    "img-cover": "https://kartinka.top/images/14/278-3440x1440-kartinka-top.jpg",
+    "imgCover": "https://kartinka.top/images/14/278-3440x1440-kartinka-top.jpg",
     "img": ["https://kartinka.top/images/14/309-3440x1440-kartinka-top.jpg", "https://kartinka.top/images/14/278-3440x1440-kartinka-top.jpg"]
   },
   {
-    "title": "Victor Bagryanyi two diferent world's with same nature",
-     "descpiption-cover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
+    "title": "Victor Bagryanyi two different world's with same nature",
+    "descriptionCover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
     "descpiption": "",
-    "date": "",
+    "date": "13.04.2024",
     "category": ["Urban", "Nature"],
-    "img-cover": "https://kartinka.top/images/14/316-3440x1440-kartinka-top.jpg",
+    "imgCover": "https://kartinka.top/images/14/316-3440x1440-kartinka-top.jpg",
     "img": ["https://kartinka.top/images/14/316-3440x1440-kartinka-top.jpg", "https://kartinka.top/images/14/321-3440x1440-kartinka-top.jpg"]
   },
   {
     "title": "Rinata Akipova mystical nature between us ",
-     "descpiption-cover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
-    "descpiption": "",
-    "date": "",
+    "descriptionCover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
+    "description": "",
+    "date": "11.10.2022",
     "category": ["Nature"],
-    "img-cover": "https://kartinka.top/images/14/277-3440x1440-kartinka-top.jpg",
+    "imgCover": "https://kartinka.top/images/14/277-3440x1440-kartinka-top.jpg",
     "img": ["https://kartinka.top/images/14/318-3440x1440-kartinka-top.jpg", "https://kartinka.top/images/14/277-3440x1440-kartinka-top.jpg"]
   },
   {
     "title": "Dmytro Skarenko urban life with natural heaven",
-     "descpiption-cover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
+    "descriptionCover": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nihil inventore quisquam maxime facilis! Impedit.",
     "descpiption": "",
-    "date": "",
+    "date": "03.03.2023",
     "category": ["Urban"],
-    "img-cover": "https://kartinka.top/images/14/308-3440x1440-kartinka-top.jpg",
+    "imgCover": "https://kartinka.top/images/14/308-3440x1440-kartinka-top.jpg",
     "img": ["https://kartinka.top/images/14/308-3440x1440-kartinka-top.jpg", "https://kartinka.top/images/14/276-3440x1440-kartinka-top.jpg"]
   }
 ]
