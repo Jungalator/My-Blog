@@ -2,7 +2,7 @@
 
 .editors-pick {
   width: 100vw;
-  height: 60vh;
+  //   height: 60vh;
   padding: 0 20px;
 
   &__title-section {
@@ -16,10 +16,15 @@
     width: 100%;
   }
 
+  &__items:first-child {
+    margin: 0 30px 0 0;
+  }
+
   &__items {
-    max-width: 420px;
-    height: 35vh;
+    max-width: 500px;
+    height: 40vh;
     position: relative;
+    margin: 0 0 50px 0;
   }
 
   &__img {
@@ -39,9 +44,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 95px;
-    height: 25px;
-    padding: 0.3em;
+    padding: 5px 10px;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -72,44 +75,39 @@
     font-size: 0.75rem;
     color: v.$decor-color;
   }
-  @media (max-width: 900px) {
-    height: 90vh;
-    &__container {
-      flex-direction: column;
-      align-items: center;
-    }
+  @media (max-width: 1050px) {
+    // height: 90vh;
 
     &__items {
-      max-width: 620px;
+      max-width: 100%;
       margin: 0 0 50px 0;
     }
   }
 
   @media (max-width: 460px) {
     &__container {
-      height: 70vh;
+      //   height: 82vh;
+      flex-wrap: wrap;
     }
-    &__category {
-      padding: 0.2rem;
-      width: 55px;
-      height: 15px;
-      font-weight: 400;
-      font-size: 0.5rem;
+
+    &__items:first-child {
+      margin: 0 0 50px 0;
     }
+
     &__info-container {
       position: absolute;
       top: 60%;
       width: 85%;
     }
     &__date {
-      font-size: 0.6rem;
+      font-size: 0.8rem;
     }
     &__title {
-      font-size: 1rem;
+      font-size: 1.125rem;
       margin: 10px 0 10px 0;
     }
     &__description-cover {
-      font-size: 0.6rem;
+      font-size: 0.8rem;
       margin: 0;
     }
   }

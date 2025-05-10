@@ -1,6 +1,10 @@
 import slides from "./renderSlides.js";
 const sliderContainer = document.querySelector("[data-slider-container]");
 const dots = document.querySelectorAll(".slider__dot");
+let startX = 0;
+let startY = 0;
+let endX = 0;
+let endY = 0;
 
 let activeSlideIndex = 0;
 
@@ -36,5 +40,40 @@ dots.forEach((dot, index) => {
     handleChangeInitActiveDots(activeSlideIndex);
   });
 });
+
+sliderContainer.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+});
+
+sliderContainer.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+  endY = e.changedTouches[0].clientY;
+
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const diffX = endX - startX;
+  const diffY = endY - startY;
+
+  //Check horizontal move
+
+  if (Math.abs(diffX) > Math.abs(diffY)) {
+    if (Math.abs(diffX) > 50) {
+      if (diffX > 0) {
+        if (activeSlideIndex > 0) {
+          activeSlideIndex--;
+        }
+      } else {
+        if (activeSlideIndex < slides.length - 1) {
+          activeSlideIndex++;
+        }
+      }
+      handleChangeActiveSlide(activeSlideIndex);
+      handleChangeInitActiveDots(activeSlideIndex);
+    }
+  }
+}
 
 export default handleChangeActiveSlide;

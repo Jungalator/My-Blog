@@ -1,1 +1,87 @@
-@use "/src/scss/utils/variables.scss" as v
+@use "/src/scss/utils/variables.scss" as v;
+
+.footer {
+  padding: 65px 0 0 0;
+  position: relative;
+  height: 60vh;
+  width: 100vw;
+  background: v.$footer-background-color;
+  h3 {
+    margin: 0 0 16px 0;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__article {
+    margin: 0 0 40px 0;
+  }
+  &__main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  &__contact-item:first-child {
+    margin: 0 0 15px 0;
+  }
+  &__contact {
+    color: v.$footer-text-color;
+  }
+
+  &__titles {
+    color: v.$text-title-color;
+  }
+  &__menu-list {
+  }
+  &__menu-item:first-child {
+    margin: 0 0 15px 0;
+  }
+  &__adress {
+    color: v.$footer-text-color;
+    margin: 0;
+  }
+  &__menu-link {
+    color: v.$footer-text-color;
+  }
+
+  .social {
+    min-width: 130px;
+  }
+  &__social-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__social-item {
+    width: 20px;
+    height: 20px;
+  }
+  &__social-link {
+    width: 20px;
+    height: 20px;
+  }
+  &__social-svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__sub {
+    padding: 0 30px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0%;
+    height: 20%;
+    width: 100%;
+    background: v.$dark-color;
+
+    &-label {
+      color: v.$footer-text-color;
+    }
+    &-link {
+      color: v.$footer-text-color;
+    }
+  }
+}

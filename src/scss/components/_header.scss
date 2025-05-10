@@ -101,21 +101,10 @@
   }
 }
 
-.js-home__link {
-}
-
-.js-about__link {
-}
-
-.js-articles__link {
-}
-
-.js-contact__link {
-}
-
 .search {
   margin: 0 0 0 17px;
-  &__input-btn {
+  &__btn {
+    z-index: 80;
     width: 30px;
     height: 30px;
     padding: 0;
@@ -123,12 +112,53 @@
     border: none;
     cursor: pointer;
   }
-
   &__svg {
     width: 20px;
     height: 20px;
     fill: currentColor;
   }
+
+  &__form {
+    display: block;
+    height: 30px;
+    width: 50vw;
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    background-color: v.$header-background-color;
+    font-family: v.$categories-font-family;
+    font-size: 0.9375;
+    transform: scaleY(1);
+    transition: all 0.5s ease-in-out;
+  }
+  &__input {
+    padding: 0 10px;
+    position: absolute;
+    height: 100%;
+    width: 86%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid v.$text-title-color;
+    outline: none;
+    border-radius: 0%;
+    color: v.$decor-color;
+  }
+  &__form-btn {
+    position: absolute;
+    right: 3%;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: no-repeat;
+    border: none;
+    cursor: pointer;
+  }
+  &__form-svg {
+    width: 25px;
+    height: 25px;
+    fill: currentColor;
+  }
+
   @media (max-width: 1024px) {
     .search {
       &__input-btn {
@@ -150,4 +180,15 @@
 
   &__button {
   }
+}
+
+.is-hidden {
+  transform: scaleY(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.active-nav {
+  padding-bottom: 6px;
+  border-bottom: 1px solid v.$active-item-color;
+  overflow: hidden;
 }
