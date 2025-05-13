@@ -8,8 +8,7 @@ function searchPosts(e) {
   ) {
     document.querySelector(".search__form").classList.toggle("is-hidden");
   }
-
-  console.log(e.target.tagName);
 }
 searchContainer.addEventListener("click", searchPosts);
+
 export default searchPosts;

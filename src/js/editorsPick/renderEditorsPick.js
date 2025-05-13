@@ -1,14 +1,17 @@
-const edidorsPickSection = document.querySelector(".editors-pick");
-const editorsPickContainer = document.createElement("div");
-editorsPickContainer.className = "editors-pick__container";
 const editorsPicks = JSON.parse(localStorage.getItem("photo-posts")).splice(
   3,
   2
 );
 
 function renderEditorsPickPhotos() {
+  const section = document.createElement("section");
+  section.className = "editors-pick";
+
+  const container = document.createElement("div");
+  container.className = "editors-pick__container";
+
   editorsPicks.forEach((item) => {
-    editorsPickContainer.insertAdjacentHTML(
+    container.insertAdjacentHTML(
       "beforeend",
       `
       <article class="editors-pick__items">
@@ -27,7 +30,8 @@ function renderEditorsPickPhotos() {
             `
     );
   });
-  return edidorsPickSection.append(editorsPickContainer);
+  section.append(container);
+  return section;
 }
 
-export default renderEditorsPickPhotos();
+export default renderEditorsPickPhotos;

@@ -1,42 +1,45 @@
-import templateString from "../../partials/post.hbs?raw";
-import Handlebars from "handlebars";
 import { getItemLocalStorage } from "../localStorage/localStorage.js";
+import addPostClickLesteners from "./renderPostArticle.js";
 
-const postsJson = getItemLocalStorage("posts");
-const postsList = document.querySelector(".posts__list");
+let listenersAttached = false;
 
-const filterBtnsList = document.querySelector(".posts__filter-list");
-const filterBtns = document.querySelectorAll(".posts__filter-btn");
+function addFilterListeners() {
+  if (listenersAttached) return; // 🔒 предотвращаем повторную инициализацию
 
-const allCategoriesBtn = document.querySelector("[data-all-categories-btn]");
+  const postsJson = getItemLocalStorage("posts");
+  const postsList = document.querySelector(".posts__list");
+  const filterBtnsList = document.querySelector(".posts__filter-list");
+  const filterBtns = document.querySelectorAll(".posts__filter-btn");
 
-const template = Handlebars.compile(templateString);
+  if (!postsList || !filterBtnsList || !filterBtns.length) {
+    console.warn("Фильтры не найдены — возможно, разметка ещё не загружена");
+    return;
+  }
+  console.log("Кнопок фильтра найдено:", filterBtns.length);
+  filterBtns[0].classList.add("active-filter");
 
-filterBtns[0].classList.add("active-filter");
+  filterBtnsList.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("posts__filter-btn")) return;
 
-function filterPosts(e) {
-  if (e.target.classList.contains("posts__filter-btn")) {
     filterBtns.forEach((item) => item.classList.remove("active-filter"));
     e.target.classList.add("active-filter");
 
-    const filteredPosts = postsJson
-      .filter((item) => item.category.includes(e.target.textContent))
-      .map((item) => item);
+    let filteredPosts;
 
-    const html = template(filteredPosts);
-    postsList.innerHTML = "";
-
-    postsList.insertAdjacentHTML("beforeend", `${html}`);
-
-    if (allCategoriesBtn.classList.contains("active-filter")) {
-      postsList.innerHTML = "";
-
-      postsList.insertAdjacentHTML(
-        "beforeend",
-        `${template(getItemLocalStorage("posts"))}`
+    if (e.target.hasAttribute("data-all-categories-btn")) {
+      filteredPosts = postsJson;
+    } else {
+      filteredPosts = postsJson.filter((item) =>
+        item.category.includes(e.target.textContent)
       );
     }
-  }
+
+    postsList.innerHTML = template(filteredPosts);
+
+    addPostClickLesteners(); // ✅ обязательно — иначе посты не кликабельны после фильтра
+  });
+
+  listenersAttached = true;
 }
-filterBtnsList.addEventListener("click", filterPosts);
-export default filterPosts;
+
+export default addFilterListeners;

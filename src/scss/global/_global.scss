@@ -12,6 +12,12 @@ body {
   font-family: "Lora", serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
 .list {
   list-style: none;
 }

@@ -1,6 +1,11 @@
 <div class="slide" data-slide-elem>
   {{#if imgCover}}
-    <img src="{{imgCover}}" alt="Slide cover" class="slide__img" />
+    <img
+      src="{{imgCover}}"
+      alt="Slide cover"
+      class="slide__img"
+      loading="lazy"
+    />
   {{/if}}
   <div class="slide__info-container">
     <div class="slide__category">

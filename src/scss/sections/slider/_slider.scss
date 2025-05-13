@@ -1,6 +1,7 @@
 @use "../../utils/variables.scss" as v;
 
 .slider {
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-color: v.$slider-image-color;
@@ -98,6 +99,7 @@
 
   &__dots {
     display: flex;
+    z-index: 40;
     justify-content: space-between;
     position: absolute;
     bottom: 70px;

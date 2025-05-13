@@ -1,0 +1,46 @@
+      <section class="article-pick">
+                <img class="article-pick__img" src="{{imgCover}}"
+                 alt="Article pick {{title}}"></img> 
+        <div class="article-pick__info-container">
+             <ul class="article-pick__categories list">
+            {{#each category}}
+            <li class="article-pick__categories-item">{{this}}</li>
+            {{/each}}
+        </ul>
+        <h3 class="article-pick__title">{{title}}</h3>
+        <p class="article-pick__description-cover">{{subDescription}}</p>
+        <p class="article-pick__author-name">By {{author.name}} {{author.surname}}</p>
+        </div>
+</section>
+<section class="article-main">
+<div class="article-main__container">
+<p class="article-main__date">{{date}}</p>
+<article class="article-main__general">
+    <p class="article-main__general-desc">{{description}}</p>
+    <ul class="article-main__general-img-list list">
+        <li class="article-main__general-img-item"><img loading="lazy" class="article-main__general-img" src="{{img1}}" alt="First photo"></li>
+        <li class="article-main__general-img-item"><img loading="lazy" class="article-main__general-img" src="{{img2}}" alt="Second photo"></li>
+    </ul>
+    <h3 class="article-main__general-title">{{title}}</h3>
+    <p class="article-main__general-summary-desc">{{summaryDescription}}</p>
+                
+      <ul class="article-main__author-categories list">
+            {{#each category}}
+            <li class="article-main__author-categories-item">{{this}}</li>
+            {{/each}}
+        </ul>
+        <hr class="article-main__author-line">
+<article class="article-main__author">
+        <img class="article-main__author-avatar" src="{{#if author.avatar}}{{author.avatar}}{{else}}/images/no-avatar.png {{/if}}" alt="Author avatar">
+        <ul class="article-main__author-info list">
+            <li class="article-main__author-name">By {{author.name}} {{author.surname}}</li>
+            <li class="article-main__author-profession">{{#each author.profession}}
+                <p class="article-main__author-profession-info">{{this}}</p>
+                {{/each}}
+            </li>
+        </ul>
+</article>
+</article>
+
+</div>
+</section>

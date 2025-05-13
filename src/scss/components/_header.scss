@@ -103,6 +103,7 @@
 
 .search {
   margin: 0 0 0 17px;
+
   &__btn {
     z-index: 80;
     width: 30px;
@@ -127,8 +128,8 @@
     right: 0%;
     background-color: v.$header-background-color;
     font-family: v.$categories-font-family;
-    font-size: 0.9375;
-    transform: scaleY(1);
+    font-size: 0.9375rem;
+    transform: translateX(0%);
     transition: all 0.5s ease-in-out;
   }
   &__input {
@@ -172,18 +173,10 @@
       }
     }
   }
-
-  &__form {
-  }
-  &__input {
-  }
-
-  &__button {
-  }
 }
 
 .is-hidden {
-  transform: scaleY(0);
+  transform: translateX(100%);
   transition: all 0.5s ease-in-out;
 }
 
