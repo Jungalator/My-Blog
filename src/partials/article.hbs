@@ -1,5 +1,5 @@
       <section class="article-pick">
-                <img class="article-pick__img" src="{{imgCover}}"
+                <img class="article-pick__img" src="{{#if imgCover}}{{imgCover}}{{else}}public/images/no-image.png{{/if}}"
                  alt="Article pick {{title}}"></img> 
         <div class="article-pick__info-container">
              <ul class="article-pick__categories list">
@@ -18,8 +18,8 @@
 <article class="article-main__general">
     <p class="article-main__general-desc">{{description}}</p>
     <ul class="article-main__general-img-list list">
-        <li class="article-main__general-img-item"><img loading="lazy" class="article-main__general-img" src="{{img1}}" alt="First photo"></li>
-        <li class="article-main__general-img-item"><img loading="lazy" class="article-main__general-img" src="{{img2}}" alt="Second photo"></li>
+        <li class="article-main__general-img-item"><img loading="lazy" class="article-main__general-img" src="{{#if img1}}{{img1}}{{else}}public/images/no-image.png{{/if}}" alt="First photo"></li>
+        <li class="article-main__general-img-item"><img loading="lazy" class="article-main__general-img" src="{{#if img2}}{{img2}}{{else}}public/images/no-image.png{{/if}}" alt="Second photo"></li>
     </ul>
     <h3 class="article-main__general-title">{{title}}</h3>
     <p class="article-main__general-summary-desc">{{summaryDescription}}</p>
@@ -31,7 +31,7 @@
         </ul>
         <hr class="article-main__author-line">
 <article class="article-main__author">
-        <img class="article-main__author-avatar" src="{{#if author.avatar}}{{author.avatar}}{{else}}/images/no-avatar.png {{/if}}" alt="Author avatar">
+        <img class="article-main__author-avatar" src="{{#if author.avatar}}{{author.avatar}}{{else}}public/images/no-avatar.png{{/if}}" alt="Author avatar">
         <ul class="article-main__author-info list">
             <li class="article-main__author-name">By {{author.name}} {{author.surname}}</li>
             <li class="article-main__author-profession">{{#each author.profession}}

@@ -138,3 +138,9 @@
     margin: 0 5px 0 0;
   }
 }
+
+.all-posts__title-and-add-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

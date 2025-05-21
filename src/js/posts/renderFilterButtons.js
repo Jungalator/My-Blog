@@ -62,7 +62,6 @@ function renderFilterButton() {
     filterButtonsList.append(filterItem);
     filterItem.append(filterBtn);
   });
-  console.log(filterButtonsList);
   filterButtonsContainer.append(filterButtonsList);
   return filterButtonsContainer;
 }

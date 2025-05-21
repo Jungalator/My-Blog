@@ -10,14 +10,14 @@ import renderFilterButtons from "./renderFilterButtons.js";
 import addFilterListeners from "./fiterPosts.js";
 
 const template = Handlebars.compile(templateString);
-const postsArr = postsJson.map((post) => ({
-  ...post,
-  id: uuidv4(),
-}));
+// const postsArr = postsJson.map((post) => ({
+//   ...post,
+//   id: uuidv4(),
+// }));
 
 //=======================================
-const renderPosts = () => {
-  setItemLocalStorage("posts", postsArr);
+const renderPosts = (posts) => {
+  // setItemLocalStorage("posts", postsArr);
   const postsSection = document.createElement("section");
   postsSection.className = "posts";
 
@@ -25,7 +25,7 @@ const renderPosts = () => {
   postsTitle.className = "posts__title";
   postsTitle.textContent = "Popular topics";
 
-  const html = template(getItemLocalStorage("posts"));
+  const html = template(posts.slice(0, 8));
 
   postsSection.insertAdjacentHTML(
     "beforeend",

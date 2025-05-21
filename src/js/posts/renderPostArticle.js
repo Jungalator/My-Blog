@@ -6,6 +6,7 @@ const main = document.querySelector(".main");
 
 function fullPostInfo(fullPost) {
   console.log("Rendering full post:", fullPost?.id);
+
   if (!fullPost) return;
   main.innerHTML = "";
   const html = template(fullPost);

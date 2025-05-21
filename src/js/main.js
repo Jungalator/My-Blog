@@ -40,8 +40,12 @@ import "../scss/main.scss";
 // window.addEventListener("DOMContentLoaded", () => {
 //   routePage();
 // });
-
-import { getItemLocalStorage } from "./localStorage/localStorage.js";
+import postsJson from "../../posts.json";
+import { v4 as uuidv4 } from "uuid";
+import {
+  getItemLocalStorage,
+  setItemLocalStorage,
+} from "./localStorage/localStorage.js";
 import initSlides from "./slider/initSlider.js";
 import posts from "./posts/posts.js";
 import renderEditorsPickPhotos from "./editorsPick/renderEditorsPick.js";
@@ -49,18 +53,24 @@ import renderPhotoPost from "./photoPost/renderPhotoPost.js";
 import searchPosts from "./searchPosts/searchPosts";
 import menu from "./header/menu";
 import fullPostInfo from "./posts/renderPostArticle";
+import renderArticlePage from "./articles/allPosts.js";
+import renderModalAddArticle from "./articles/addPosts/renderModalAddArticle.js";
+import addPost from "./articles/addPosts/addPosts.js";
 
+const allPosts = getItemLocalStorage("posts");
+const navLinks = document.querySelectorAll(".js__link");
 const main = document.querySelector(".main");
 
 function renderMainPage() {
   main.innerHTML = "";
 
-  const postSection = posts();
+  const postSection = posts(allPosts);
   const photoSection = renderPhotoPost();
   const editorsSection = renderEditorsPickPhotos();
 
   main.append(postSection, photoSection, editorsSection);
 
+  addHeaderClickListeners();
   addPostClickLesteners();
   initSlides();
 }
@@ -73,9 +83,42 @@ function addPostClickLesteners() {
   });
 }
 
+function addHeaderClickListeners() {
+  const menu = document.querySelector(".menu__container");
+  const menuBtn = document.querySelector(".menu__button");
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.target.classList.add("active-nav");
+      if (
+        navLink.hasAttribute("data-articles-page") ||
+        navLink.hasAttribute("data-menu-articles-page")
+      ) {
+        menuBtn.classList.remove("open");
+        menu.classList.remove("menu-active");
+
+        window.location.hash = "#articles";
+      } else if (
+        navLink.hasAttribute("data-about-page") ||
+        navLink.hasAttribute("data-menu-about-page")
+      ) {
+        menuBtn.classList.remove("open");
+        menu.classList.remove("menu-active");
+        window.location.hash = "#about";
+      } else {
+        menuBtn.classList.remove("open");
+        menu.classList.remove("menu-active");
+        window.location = "";
+      }
+    });
+  });
+}
+
 function handleHashChange() {
   const hash = window.location.hash;
-
+  document
+    .querySelectorAll(".js__link")
+    .forEach((link) => link.classList.remove("active-nav"));
   if (hash.startsWith("#post-")) {
     console.log("Hash changed:", window.location.hash);
     const id = hash.replace("#post-", "");
@@ -84,14 +127,40 @@ function handleHashChange() {
 
     fullPostInfo(fullPost);
     window.scrollTo(0, 0);
+  }
+  //   else {
+  //     renderMainPage();
+  //     window.scrollTo(0, 0);
+  //   }
+  else if (hash.startsWith("#articles")) {
+    document.querySelector("[data-articles-page]").classList.add("active-nav");
+    document
+      .querySelector("[data-menu-articles-page]")
+      .classList.add("active-nav");
+    main.innerHTML = "";
+    renderArticlePage(allPosts);
+    addPostClickLesteners();
+    const modal = renderModalAddArticle(allPosts);
+    document.body.append(modal);
+    addPost(allPosts);
+    window.scrollTo(0, 0);
+  } else if (hash.startsWith("#about")) {
+    document.querySelector("[data-about-page]").classList.add("active-nav");
+    document
+      .querySelector("[data-menu-about-page]")
+      .classList.add("active-nav");
+    main.innerHTML = "";
+    renderAboutPage();
+    window.scrollTo(0, 0);
   } else {
+    main.innerHTML = "";
     renderMainPage();
     window.scrollTo(0, 0);
+    document.querySelector("[data-home-page]").classList.add("active-nav");
+    document.querySelector("[data-menu-home-page]").classList.add("active-nav");
   }
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  handleHashChange();
-});
+window.addEventListener("DOMContentLoaded", handleHashChange);
 window.addEventListener("hashchange", handleHashChange);
 export default addPostClickLesteners;
