@@ -20,12 +20,13 @@ const renderPosts = (posts) => {
   // setItemLocalStorage("posts", postsArr);
   const postsSection = document.createElement("section");
   postsSection.className = "posts";
+  const newPosts = posts.slice(0, 8);
 
   const postsTitle = document.createElement("h3");
   postsTitle.className = "posts__title";
   postsTitle.textContent = "Popular topics";
 
-  const html = template(posts.slice(0, 8));
+  const html = template(newPosts);
 
   postsSection.insertAdjacentHTML(
     "beforeend",
@@ -35,7 +36,7 @@ const renderPosts = (posts) => {
     </ul>
     `
   );
-  const filters = renderFilterButtons();
+  const filters = renderFilterButtons(newPosts);
   postsSection.prepend(postsTitle, filters);
 
   return postsSection;

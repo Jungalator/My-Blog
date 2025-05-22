@@ -1,0 +1,69 @@
+@use "/src/scss/utils/variables.scss" as v;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 50px auto;
+  padding: 20px;
+  width: fit-content;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  &__list {
+    padding: 0 5px;
+    margin: 0 10px;
+    display: flex;
+  }
+
+  &__item {
+    padding: 3px 10px;
+    border: 1px solid v.$text-color;
+    border-radius: 5px;
+    color: v.$middle-dark-color;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+  }
+  &__item:hover {
+    background: v.$decor-color;
+    color: v.$middle-dark-color;
+  }
+  &__item:last-child {
+    margin: 0;
+  }
+}
+
+.btn-prev {
+  padding: 3px 5px;
+  color: v.$text-color;
+  background: v.$decor-color;
+  border: 1px solid v.$text-color;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-prev:hover {
+  background-color: v.$image-background;
+}
+
+.btn-next {
+  padding: 3px 5px;
+  color: v.$text-color;
+  background: v.$decor-color;
+  border: 1px solid v.$text-color;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-next:hover {
+  background-color: v.$image-background;
+}
+
+.hidden-pag {
+  display: none;
+}
+
+.active-count {
+  background: #000;
+  border: 1ps solid #fff;
+  color: #fff;
+}

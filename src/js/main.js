@@ -138,11 +138,14 @@ function handleHashChange() {
       .querySelector("[data-menu-articles-page]")
       .classList.add("active-nav");
     main.innerHTML = "";
+
     renderArticlePage(allPosts);
+
     addPostClickLesteners();
     const modal = renderModalAddArticle(allPosts);
     document.body.append(modal);
     addPost(allPosts);
+
     window.scrollTo(0, 0);
   } else if (hash.startsWith("#about")) {
     document.querySelector("[data-about-page]").classList.add("active-nav");

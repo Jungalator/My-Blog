@@ -4,8 +4,7 @@ import { getItemLocalStorage } from "../localStorage/localStorage.js";
 import addPostClickLesteners from "./renderPostArticle";
 const template = Handlebars.compile(templateString);
 
-function renderFilterButton() {
-  const postsJson = getItemLocalStorage("posts");
+function renderFilterButton(postsJson) {
   const filterButtonsContainer = document.createElement("div");
   filterButtonsContainer.className = "posts__filter-container";
 
