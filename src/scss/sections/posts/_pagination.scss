@@ -23,6 +23,7 @@
     color: v.$middle-dark-color;
     margin: 0 10px 0 0;
     cursor: pointer;
+    transition: 0.2s linear;
   }
   &__item:hover {
     background: v.$decor-color;
@@ -40,6 +41,7 @@
   border: 1px solid v.$text-color;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.2s linear;
 }
 .btn-prev:hover {
   background-color: v.$image-background;
@@ -52,6 +54,7 @@
   border: 1px solid v.$text-color;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.2s linear;
 }
 
 .btn-next:hover {

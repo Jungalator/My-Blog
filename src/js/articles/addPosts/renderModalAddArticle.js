@@ -12,7 +12,7 @@ function renderModalAddArticle() {
     "beforeend",
     `
   <svg class="modal__close-svg">
-  <use xlink:href="public/favicon/sprites.svg#close"></use>
+  <use xlink:href="favicon/sprites.svg#close"></use>
   </svg>
   `
   );

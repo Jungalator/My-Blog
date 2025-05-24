@@ -1,0 +1,106 @@
+@use "/src/scss/utils/variables.scss" as v;
+
+.about {
+  &__img-container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 0 50px 0;
+  }
+  &__cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+
+  &__info {
+    padding: 20px;
+    &-list {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 0 0 40px 0;
+    }
+    // &-item {
+    //   width: 47%;
+    // }
+    &-item:first-child {
+      height: 170px;
+      display: contents;
+    }
+    &-item:nth-child(2) {
+      margin: 0 0 20px 0;
+      width: 30%;
+    }
+    &-item:last-child {
+      width: 65%;
+      color: v.$middle-dark-color;
+    }
+    &-title {
+      margin: 0 0 30px 0;
+      color: v.$middle-dark-color;
+    }
+    &-text {
+      margin: 0 0 20px 0;
+      color: v.$middle-dark-color;
+    }
+    &-img {
+      width: 100%;
+    }
+    &-inside-list {
+    }
+    &-inside-item {
+      position: relative;
+      margin: 0 0 10px 0;
+      color: v.$middle-dark-color;
+    }
+    &-inside-item::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0.5em;
+      left: -1em;
+      width: 8px;
+      height: 3px;
+      border-left: 2px solid #3498db;
+      border-bottom: 2px solid #3498db;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+
+    @media (max-width: 760px) {
+      &-list {
+        display: block;
+      }
+      &-item {
+        width: 90%;
+      }
+      &-item:nth-child(2) {
+        width: 50%;
+        margin: 0 auto 20px;
+      }
+      &-item:last-child {
+        width: 100%;
+      }
+    }
+  }
+
+  &__icons-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+
+  &__icons-item {
+    width: 60px;
+    height: 60px;
+  }
+  @media (max-width: 460px) {
+    &__icons-item {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

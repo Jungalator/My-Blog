@@ -35,7 +35,7 @@ function renderArticlePage(newPost) {
     "beforeend",
     `
   <svg class="modal__open-svg">
-  <use xlink:href="public/favicon/sprites.svg#open"></use>
+  <use xlink:href="favicon/sprites.svg#open"></use>
   </svg>
   `
   );

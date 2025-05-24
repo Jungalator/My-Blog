@@ -56,6 +56,8 @@ import fullPostInfo from "./posts/renderPostArticle";
 import renderArticlePage from "./articles/allPosts.js";
 import renderModalAddArticle from "./articles/addPosts/renderModalAddArticle.js";
 import addPost from "./articles/addPosts/addPosts.js";
+import weather from "./header/weather.js";
+import renderAboutPage from "./about/renderAboutPage.js";
 
 const allPosts = getItemLocalStorage("posts");
 const navLinks = document.querySelectorAll(".js__link");
@@ -148,11 +150,12 @@ function handleHashChange() {
 
     window.scrollTo(0, 0);
   } else if (hash.startsWith("#about")) {
+    main.innerHTML = "";
     document.querySelector("[data-about-page]").classList.add("active-nav");
     document
       .querySelector("[data-menu-about-page]")
       .classList.add("active-nav");
-    main.innerHTML = "";
+
     renderAboutPage();
     window.scrollTo(0, 0);
   } else {
@@ -163,6 +166,7 @@ function handleHashChange() {
     document.querySelector("[data-menu-home-page]").classList.add("active-nav");
   }
 }
+console.log(new Date());
 
 window.addEventListener("DOMContentLoaded", handleHashChange);
 window.addEventListener("hashchange", handleHashChange);

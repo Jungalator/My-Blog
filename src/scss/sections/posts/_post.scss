@@ -32,8 +32,9 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: 0.1s linear;
   &__cover {
-    width: 260px;
+    width: 100%;
   }
 
   &_img {
@@ -137,6 +138,10 @@
     color: v.$text-color;
     margin: 0 5px 0 0;
   }
+}
+.post:hover {
+  width: 280px;
+  box-shadow: 1px 1px 10px 1px #000;
 }
 
 .all-posts__title-and-add-container {
