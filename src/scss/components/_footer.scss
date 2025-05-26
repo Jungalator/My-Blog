@@ -28,22 +28,32 @@
   }
   &__contact {
     color: v.$footer-text-color;
+    transition: 0.2s linear;
+  }
+
+  &__contact:hover {
+    color: v.$active-item-color;
   }
 
   &__titles {
     color: v.$text-title-color;
   }
-  &__menu-list {
-  }
+
   &__menu-item:first-child {
     margin: 0 0 15px 0;
   }
+
   &__adress {
     color: v.$footer-text-color;
     margin: 0;
   }
+
   &__menu-link {
     color: v.$footer-text-color;
+    transition: 0.2s linear;
+  }
+  &__menu-link:hover {
+    color: v.$active-item-color;
   }
 
   .social {
@@ -56,14 +66,20 @@
   &__social-item {
     width: 20px;
     height: 20px;
+    transition: 0.2s linear;
+  }
+  &__social-item:hover {
+    width: 30px;
+    height: 30px;
   }
   &__social-link {
     width: 20px;
     height: 20px;
   }
+
   &__social-svg {
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 100%;
   }
 
   &__sub {

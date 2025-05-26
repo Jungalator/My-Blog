@@ -10,6 +10,10 @@ function renderEditorsPickPhotos() {
   const container = document.createElement("div");
   container.className = "editors-pick__container";
 
+  const title = document.createElement("h3");
+  title.className = "editors-pick__title-section";
+  title.textContent = "Editor’s Pick";
+
   editorsPicks.forEach((item) => {
     container.insertAdjacentHTML(
       "beforeend",
@@ -30,7 +34,8 @@ function renderEditorsPickPhotos() {
             `
     );
   });
-  section.append(container);
+
+  section.append(title, container);
   return section;
 }
 

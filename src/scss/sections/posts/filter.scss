@@ -18,6 +18,14 @@
     border-radius: 5px;
     height: 40px;
   }
+
+  &__filter-btn {
+    transition: 0.2s linear;
+  }
+  &__filter-btn:hover {
+    color: v.$active-item-color;
+  }
+
   @media (min-width: 460px) {
     &__filter-list {
       justify-content: space-around;

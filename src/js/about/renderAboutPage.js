@@ -6,7 +6,8 @@ const renderAboutPage = () => {
   imgContainer.className = "about__img-container";
 
   const coverImg = document.createElement("img");
-  coverImg.src = "public/images/blogit.jpg";
+  coverImg.src = "images/blogit.jpg";
+  coverImg.loading = "lazy";
   coverImg.className = "about__cover-img";
 
   const infoContainer = document.createElement("article");
@@ -14,9 +15,9 @@ const renderAboutPage = () => {
 
   const main = document.querySelector(".main");
   main.innerHTML = "";
-  let imgSrc = "public/images/my-photo.jpg";
+  let imgSrc = "images/my-photo.jpg";
   if (!imgSrc) {
-    imgSrc = "public/images/no-image.png";
+    imgSrc = "images/no-image.png";
   }
 
   infoContainer.insertAdjacentHTML(
@@ -28,7 +29,7 @@ const renderAboutPage = () => {
     <p class="about__info-text">My name is Aleksey, and I am a Junior Frontend JavaScript React developer in training. I built this project using vanilla JavaScript to better master fundamental web development principles and understand how modern apps are constructed "under the hood."</p>
     </li>
         <li class="about__info-item">
-    <img class="about__info-img" src="${imgSrc}" alt="Photo founder"/>
+    <img loading="lazy" class="about__info-img" src="${imgSrc}" alt="Photo founder"/>
     </li>
       <li class="about__info-item"> 
     <p class="about__info-text">I am passionate about creating user-friendly and intuitive interfaces and constantly learning to write clean, readable, and maintainable code. I already have knowledge of modern web technologies and tools and strive for continuous growth. Besides programming, I am interested in self-development and read extensively — this helps me stay motivated and broaden my horizons.</p>

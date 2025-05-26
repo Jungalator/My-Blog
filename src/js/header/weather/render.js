@@ -1,43 +1,25 @@
 const headerContainer = document.querySelector(".header__container");
 const headerLogo = document.querySelector(".header__logo");
+
 const weatherContainer = document.createElement("div");
 weatherContainer.className = "weather";
 
-let weatherData;
-let weatherSVG;
-const weatherURL =
-  "https://api.open-meteo.com/v1/forecast?latitude=50.4375&longitude=30.5&hourly=temperature_2m,weather_code&current=temperature_2m,weather_code,is_day&timezone=auto";
-
-const renderWeather = (weather) => {
+const renderWeather = (weather, city, country) => {
   const date = new Date();
-  let weekDay;
+  const days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  let weatherSVG;
   const isDay = weather.current.is_day === 1;
   const code = weather.current.weather_code;
-  console.log(code);
 
-  switch (date.getDay()) {
-    case 1:
-      weekDay = "Monday";
-      break;
-    case 2:
-      weekDay = "Tuesday";
-      break;
-    case 3:
-      weekDay = "Wednesday";
-      break;
-    case 4:
-      weekDay = "Thursday";
-      break;
-    case 5:
-      weekDay = "Friday";
-      break;
-    case 6:
-      weekDay = "Saturday";
-      break;
-    case 0:
-      weekDay = "Sunday";
-      break;
-  }
+  const weekDay = days[date.getDay()];
 
   if (isDay && [1, 2, 3].includes(code)) {
     weatherSVG = "cloud-sun";
@@ -60,10 +42,10 @@ const renderWeather = (weather) => {
     "beforeend",
     `
          <svg class="weather__svg">
-            <use xlink:href="public/favicon/sprites.svg#${weatherSVG}"></use>
+            <use xlink:href="favicon/sprites.svg#${weatherSVG}"></use>
         </svg>   
 <ul class="weather__info-list list">
-        <li class="weather__info-item">Ukraine, Kiev</li>
+        <li class="weather__info-item">${country}, ${city}</li>
         <li class="weather__info-item">${weekDay}</li>  
         <li class="weather__info-item">${weather.current.temperature_2m} °C</li>
 
@@ -73,16 +55,4 @@ const renderWeather = (weather) => {
 
   headerContainer.insertBefore(weatherContainer, headerLogo.nextSibling);
 };
-
-const getWeatherData = async () => {
-  try {
-    const response = await fetch(weatherURL);
-    weatherData = await response.json();
-    console.log(weatherData);
-    renderWeather(weatherData);
-  } catch (error) {
-    console.log("Ошибка определения погоды ", error.message);
-  }
-};
-
-export default getWeatherData();
+export default renderWeather;

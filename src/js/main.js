@@ -1,51 +1,6 @@
 "use strict";
 import "../scss/main.scss";
-
-// Импорты модулей
-// import posts from "./posts/posts";
-// import initSlides from "./slider/initSlider";
-// import filterPosts from "./posts/fiterPosts";
-// import photoPost from "./photoPost/renderPhotoPost";
-// import renderEditorsPick from "./editorsPick/renderEditorsPick";
-// import renderPostArticle from "./posts/renderPostArticle";
-// import renderFilterButton from "./posts/renderFilterButtons";
-
-// Глобальный роутинг по URL или data-атрибутам
-// function initHomePage() {
-//   //   searchPosts();
-//   //   filterPosts();
-//   //   posts();
-//   //   renderFilterButton();
-//   //   renderEditorsPick();
-// }
-
-// function initPhotoPostPage() {
-//   photoPost();
-// }
-
-// function initArticlePage() {
-//   renderPostArticle();
-// }
-
-// // Определим, какую страницу инициализировать
-// function routePage() {
-//   const pathname = window.location.pathname;
-
-//   if (pathname.includes("/#post-")) {
-//     initArticlePage();
-//   }
-// }
-
-// // Запускаем роутинг при загрузке
-// window.addEventListener("DOMContentLoaded", () => {
-//   routePage();
-// });
-import postsJson from "../../posts.json";
-import { v4 as uuidv4 } from "uuid";
-import {
-  getItemLocalStorage,
-  setItemLocalStorage,
-} from "./localStorage/localStorage.js";
+import { getItemLocalStorage } from "./localStorage/localStorage.js";
 import initSlides from "./slider/initSlider.js";
 import posts from "./posts/posts.js";
 import renderEditorsPickPhotos from "./editorsPick/renderEditorsPick.js";
@@ -56,7 +11,7 @@ import fullPostInfo from "./posts/renderPostArticle";
 import renderArticlePage from "./articles/allPosts.js";
 import renderModalAddArticle from "./articles/addPosts/renderModalAddArticle.js";
 import addPost from "./articles/addPosts/addPosts.js";
-import weather from "./header/weather.js";
+import weather from "./header/weather/start-weather-app.js";
 import renderAboutPage from "./about/renderAboutPage.js";
 
 const allPosts = getItemLocalStorage("posts");
@@ -129,12 +84,7 @@ function handleHashChange() {
 
     fullPostInfo(fullPost);
     window.scrollTo(0, 0);
-  }
-  //   else {
-  //     renderMainPage();
-  //     window.scrollTo(0, 0);
-  //   }
-  else if (hash.startsWith("#articles")) {
+  } else if (hash.startsWith("#articles")) {
     document.querySelector("[data-articles-page]").classList.add("active-nav");
     document
       .querySelector("[data-menu-articles-page]")
@@ -166,7 +116,6 @@ function handleHashChange() {
     document.querySelector("[data-menu-home-page]").classList.add("active-nav");
   }
 }
-console.log(new Date());
 
 window.addEventListener("DOMContentLoaded", handleHashChange);
 window.addEventListener("hashchange", handleHashChange);
