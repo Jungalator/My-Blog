@@ -13,12 +13,12 @@ async function getCurrentLocation(lat, lon) {
       data.address.town ||
       data.address.village ||
       data.address.hamlet ||
-      "Uknow";
-    const country = data.address.country || "Uknow";
+      "Kyiv";
+    const country = data.address.country || "Ukraine";
     return { city, country };
   } catch (error) {
     console.error("Error getting location data:", error.message);
-    return { city: "Uknow", country: "Uknow" };
+    return { city: "Kyiv", country: "Ukraine" };
   }
 }
 

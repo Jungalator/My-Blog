@@ -21,9 +21,6 @@
       justify-content: space-between;
       margin: 0 0 40px 0;
     }
-    // &-item {
-    //   width: 47%;
-    // }
     &-item:first-child {
       height: 170px;
       display: contents;
@@ -47,8 +44,7 @@
     &-img {
       width: 100%;
     }
-    &-inside-list {
-    }
+
     &-inside-item {
       position: relative;
       margin: 0 0 10px 0;

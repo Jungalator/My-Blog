@@ -7,13 +7,13 @@ weatherContainer.className = "weather";
 const renderWeather = (weather, city, country) => {
   const date = new Date();
   const days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
   ];
   let weatherSVG;
   const isDay = weather.current.is_day === 1;

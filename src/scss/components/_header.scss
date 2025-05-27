@@ -112,9 +112,9 @@
     }
 
     &__svg {
-      width: 80%; /* или нужный размер */
+      width: 80%;
       height: 80%;
-      fill: currentColor; /* чтобы наследовался цвет текста */
+      fill: currentColor;
     }
   }
 }

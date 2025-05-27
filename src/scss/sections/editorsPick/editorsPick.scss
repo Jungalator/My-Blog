@@ -78,8 +78,6 @@
     color: v.$decor-color;
   }
   @media (max-width: 1050px) {
-    // height: 90vh;
-
     &__items {
       max-width: 100%;
       margin: 0 0 50px 0;
@@ -88,7 +86,6 @@
 
   @media (max-width: 460px) {
     &__container {
-      //   height: 82vh;
       flex-wrap: wrap;
     }
 

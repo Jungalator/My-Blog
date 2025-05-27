@@ -6,7 +6,7 @@ import posts from "./posts/posts.js";
 import renderEditorsPickPhotos from "./editorsPick/renderEditorsPick.js";
 import renderPhotoPost from "./photoPost/renderPhotoPost.js";
 import searchPosts from "./searchPosts/searchPosts";
-import menu from "./header/menu";
+import menuHeader from "./header/menu";
 import fullPostInfo from "./posts/renderPostArticle";
 import renderArticlePage from "./articles/allPosts.js";
 import renderModalAddArticle from "./articles/addPosts/renderModalAddArticle.js";
@@ -17,6 +17,22 @@ import renderAboutPage from "./about/renderAboutPage.js";
 const allPosts = getItemLocalStorage("posts");
 const navLinks = document.querySelectorAll(".js__link");
 const main = document.querySelector(".main");
+const footer = document.querySelector(".footer");
+const menu = document.querySelector(".menu__container");
+const menuBtn = document.querySelector(".menu__button");
+
+document.querySelectorAll(".js-contact__link").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    menuBtn.classList.remove("open");
+    menu.classList.remove("menu-active");
+    window.scroll({
+      top: footer.offsetTop,
+      behavior: "smooth",
+    });
+  });
+});
+console.log(document.querySelector(".js-contact__link"));
 
 function renderMainPage() {
   main.innerHTML = "";
@@ -41,8 +57,6 @@ function addPostClickLesteners() {
 }
 
 function addHeaderClickListeners() {
-  const menu = document.querySelector(".menu__container");
-  const menuBtn = document.querySelector(".menu__button");
   navLinks.forEach((navLink) => {
     navLink.addEventListener("click", (e) => {
       e.preventDefault();
