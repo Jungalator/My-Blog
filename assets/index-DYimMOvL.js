@@ -53,7 +53,7 @@ Expecting `+L.join(", ")+", got '"+(this.terminals_[k]||k)+"'":x="Parse error on
 <li class="post" data-id="{{id}}">
     <button class="post__delete" data-id="{{id}}">
         <svg class="post__delete-svg">
-            <use xlink:href="favicon/sprites.svg#delete"></use>
+            <use xlink:href="/public/favicon/sprites.svg#delete"></use>
         </svg>
     </button>
     <div class="post__cover">
