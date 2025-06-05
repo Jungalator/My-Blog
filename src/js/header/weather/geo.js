@@ -1,4 +1,15 @@
+import {
+  getItemLocalStorage,
+  setItemLocalStorage,
+} from "../../localStorage/localStorage";
+
 const getCurrentGeo = async () => {
+  const savedGeo = getItemLocalStorage("geoCoords");
+
+  if (savedGeo) {
+    return JSON.parse(savedGeo);
+  }
+
   if (navigator.geolocation) {
     try {
       const position = await new Promise((resolve, reject) => {
@@ -6,7 +17,7 @@ const getCurrentGeo = async () => {
       });
       const lat = position.coords.latitude;
       const lon = position.coords.longitude;
-
+      setItemLocalStorage("geoCoords", JSON.stringify({ lat, lon }));
       return { lat, lon };
     } catch (error) {
       console.log("Geo is not found", error);

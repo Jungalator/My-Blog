@@ -1,7 +1,6 @@
 import templateString from "../../partials/post.hbs?raw";
 import Handlebars from "handlebars";
-import { getItemLocalStorage } from "../localStorage/localStorage.js";
-import addPostClickLesteners from "./renderPostArticle";
+
 const template = Handlebars.compile(templateString);
 
 function renderFilterButton(postsJson) {
@@ -22,22 +21,21 @@ function renderFilterButton(postsJson) {
 
   allCategoriesBtn.classList.add("active-filter");
 
+  let categories = [
+    ...new Set(postsJson.flatMap((element) => element.category)),
+  ];
+
   allCategoriesBtn.addEventListener("click", () => {
     updateActiveClass(allCategoriesBtn);
     const postsList = document.querySelector(".posts__list");
-    const allPosts = postsJson.map((post) => ({ ...post }));
     if (postsList) {
-      postsList.innerHTML = template(allPosts);
-      // window.location.hash = "";
+      postsList.innerHTML = template(postsJson);
     }
   });
 
   filterAllItem.prepend(allCategoriesBtn);
   filterButtonsList.prepend(filterAllItem);
 
-  let categories = [
-    ...new Set(postsJson.flatMap((element) => element.category)),
-  ];
   categories.forEach((item) => {
     const filterItem = document.createElement("li");
     filterItem.className = "posts__filter-item";
@@ -54,14 +52,16 @@ function renderFilterButton(postsJson) {
       const postsList = document.querySelector(".posts__list");
       if (postsList) {
         postsList.innerHTML = template(filteredPosts);
-        addPostClickLesteners();
       }
     });
 
     filterButtonsList.append(filterItem);
     filterItem.append(filterBtn);
   });
-  filterButtonsContainer.append(filterButtonsList);
+
+  if (postsJson.length > 0) {
+    filterButtonsContainer.append(filterButtonsList);
+  }
   return filterButtonsContainer;
 }
 

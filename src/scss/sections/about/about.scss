@@ -1,7 +1,7 @@
 @use "/src/scss/utils/variables.scss" as v;
 
 .about {
-  &__img-container {
+  &__img {
     width: 100vw;
     height: 100vh;
     margin: 0 0 50px 0;
@@ -13,7 +13,8 @@
   }
 
   &__info {
-    padding: 20px;
+    padding: 0 20px;
+    margin: 0 0 50px 0;
     &-list {
       padding: 0;
       display: flex;
@@ -34,8 +35,11 @@
       color: v.$middle-dark-color;
     }
     &-title {
-      margin: 0 0 30px 0;
+      display: flex;
+      justify-content: center;
+      margin: 0 0 40px 0;
       color: v.$middle-dark-color;
+      font-size: 2rem;
     }
     &-text {
       margin: 0 0 20px 0;
@@ -43,6 +47,10 @@
     }
     &-img {
       width: 100%;
+    }
+
+    &-inside-list {
+      margin: 0 0 20px 0;
     }
 
     &-inside-item {
@@ -85,7 +93,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin: 0 0 30px 0;
+    margin: 0 0 40px 0;
   }
 
   &__icons-item {
@@ -97,5 +105,9 @@
       width: 40px;
       height: 40px;
     }
+  }
+
+  &__technologies {
+    padding: 0 20px;
   }
 }

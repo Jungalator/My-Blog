@@ -1,12 +1,16 @@
 import { v4 as uuidv4 } from "uuid";
-import { setItemLocalStorage } from "../../localStorage/localStorage";
+import {
+  getItemLocalStorage,
+  setItemLocalStorage,
+} from "../../localStorage/localStorage";
 import { log } from "handlebars/runtime";
 import renderArticlePage from "../allPosts";
 function addPost(allPosts) {
   const form = document.querySelector("#add-form");
   const date = new Date();
   const day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
-  const month = date.getMonth() < 10 ? "0" + date.getMonth() : date.getMonth;
+  const month =
+    date.getMonth() < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
   const year = date.getFullYear();
 
   form.addEventListener("submit", (e) => {
@@ -21,9 +25,7 @@ function addPost(allPosts) {
     ];
 
     const actualCategories = categories
-      .filter((cat) => {
-        if (cat.checked === true) return cat;
-      })
+      .filter((cat) => cat.checked)
       .map((item) => item.name);
 
     const newPost = {
@@ -47,11 +49,13 @@ function addPost(allPosts) {
 
     allPosts.push(newPost);
     setItemLocalStorage("posts", allPosts);
+    const updatePosts = getItemLocalStorage("posts");
+    renderArticlePage(updatePosts);
+
     form.reset();
     document.querySelector(".modal").classList.remove("open-modal");
     document.body.classList.remove("overflow-hidden");
     document.documentElement.classList.remove("overflow-hidden");
-    renderArticlePage(allPosts);
   });
 }
 

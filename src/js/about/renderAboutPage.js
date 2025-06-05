@@ -1,18 +1,4 @@
 const renderAboutPage = () => {
-  const aboutSection = document.createElement("section");
-  aboutSection.className = "about";
-
-  const imgContainer = document.createElement("div");
-  imgContainer.className = "about__img-container";
-
-  const coverImg = document.createElement("img");
-  coverImg.src = "images/blogit.jpg";
-  coverImg.loading = "lazy";
-  coverImg.className = "about__cover-img";
-
-  const infoContainer = document.createElement("article");
-  infoContainer.className = "about__info";
-
   const main = document.querySelector(".main");
   main.innerHTML = "";
   let imgSrc = "images/my-photo.jpg";
@@ -20,12 +6,16 @@ const renderAboutPage = () => {
     imgSrc = "images/no-image.png";
   }
 
-  infoContainer.insertAdjacentHTML(
+  main.insertAdjacentHTML(
     "beforeend",
-    ` 
+    `
+    <section class="about__img">
+<img loading="lazy" src="images/blogit.jpg" class="about__cover-img"/>
+    </section>
+    <section class="about__info">
+    <h3 class="about__info-title">About me</h3>
     <ul class="about__info-list list">
      <li class="about__info-item">
-        <h3 class="about__info-title">About me</h3>
     <p class="about__info-text">My name is Aleksey, and I am a Junior Frontend JavaScript React developer in training. I built this project using vanilla JavaScript to better master fundamental web development principles and understand how modern apps are constructed "under the hood."</p>
     </li>
         <li class="about__info-item">
@@ -57,6 +47,8 @@ const renderAboutPage = () => {
     <li class="about__info-inside-item">The project is built with the modern bundler <strong>Vite</strong>, which optimized development speed and app loading performance.</li>
     </ul>
     <p class="about__info-text">During development, I used the SAP (Single-Page Application Architecture Pattern) system, which helped improve my understanding of component separation and interaction within the app. The site design is based on a Figma mockup, allowing me to apply UI/UX skills and follow modern visual communication standards.</p>
+   </section>
+    <section class="about__technologies">
     <h3 class="about__info-title">Technologies</h3>
     <ul class="about__icons-list list">
     <li>         <svg class="about__icons-item">
@@ -101,11 +93,9 @@ const renderAboutPage = () => {
         </svg> 
     </li>
     </ul>
+    </section>
         `
   );
-  imgContainer.append(coverImg);
-  aboutSection.append(imgContainer, infoContainer);
-  main.append(aboutSection);
   return main;
 };
 

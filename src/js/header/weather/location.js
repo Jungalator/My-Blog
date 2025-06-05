@@ -9,11 +9,7 @@ async function getCurrentLocation(lat, lon) {
     const data = await response.json();
 
     const city =
-      data.address.city ||
-      data.address.town ||
-      data.address.village ||
-      data.address.hamlet ||
-      "Kyiv";
+      data.address.city || data.address.town || data.address.village || "Kyiv";
     const country = data.address.country || "Ukraine";
     return { city, country };
   } catch (error) {

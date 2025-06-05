@@ -1,5 +1,5 @@
 import { getItemLocalStorage } from "../localStorage/localStorage.js";
-import addPostClickLesteners from "./renderPostArticle.js";
+// import addPostClickLesteners from "./renderPostArticle.js";
 
 let listenersAttached = false;
 
@@ -35,8 +35,6 @@ function addFilterListeners() {
     }
 
     postsList.innerHTML = template(filteredPosts);
-
-    addPostClickLesteners(); // ✅ обязательно — иначе посты не кликабельны после фильтра
   });
 
   listenersAttached = true;

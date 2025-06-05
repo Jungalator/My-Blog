@@ -1,7 +1,12 @@
 {{#each this}}
 <li class="post" data-id="{{id}}">
+    <button class="post__delete" data-id="{{id}}">
+        <svg class="post__delete-svg">
+            <use xlink:href="favicon/sprites.svg#delete"></use>
+        </svg>
+    </button>
     <div class="post__cover">
-        <img class="post_img"  src="{{#if imgCover}} {{imgCover}}{{else}} public/images/no-image.png {{/if}}" loading="lazy" alt="Image cover">
+        <img class="post_img"  src="{{#if imgCover}} {{imgCover}}{{else}} images/no-image.png {{/if}}" loading="lazy" alt="Image cover">
         <ul class="post__categories">
             {{#each category}}
             <li class="post__categories-item">{{this}}</li>
@@ -16,7 +21,7 @@
    
     <hr class="post__line">
     <div class="post__author">
-        <img class="post__author-avatar" loading="lazy" src="{{#if author.avatar}}{{author.avatar}}{{else}}public/images/no-avatar.png{{/if}}" alt="Author avatar">
+        <img class="post__author-avatar" loading="lazy" src="{{#if author.avatar}}{{author.avatar}}{{else}}images/no-avatar.png{{/if}}" alt="Author avatar">
         <ul class="post__author-info list">
             <li class="post__author-name">By {{author.name}} {{author.surname}}</li>
             <li class="post__author-profession">{{#each author.profession}}

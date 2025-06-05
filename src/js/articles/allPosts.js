@@ -13,7 +13,7 @@ import renderFilterButton from "../posts/renderFilterButtons.js";
 const template = Handlebars.compile(templateString);
 
 let postsArr = getItemLocalStorage("posts");
-if (!postsArr || postsArr.length === 0) {
+if (postsArr === null) {
   postsArr = postsJson.map((post) => ({
     ...post,
     id: uuidv4(),
@@ -166,13 +166,17 @@ function renderArticlePage(newPost) {
     articlesOnPage = newPost.slice(firstArticlesIndex, lastArticlesIndex);
     allposts = template(articlesOnPage);
     allPostsList.innerHTML = "";
-    allPostsList.insertAdjacentHTML("beforeend", allposts);
-    window.scroll({
-      top: allPostsSection.offsetTop,
-    });
+    if (newPost.lenght > 0) {
+      allPostsList.insertAdjacentHTML("beforeend", allposts);
+      window.scroll({
+        top: allPostsSection.offsetTop,
+      });
+    }
   };
-  btnPrev.addEventListener("click", handlePagination);
-  btnNext.addEventListener("click", handlePagination);
+  if (newPost.lenght > 0) {
+    btnPrev.addEventListener("click", handlePagination);
+    btnNext.addEventListener("click", handlePagination);
+  }
 
   allPostsTitleAndAddContainer.append(postsTitle, openBtn);
   allPostsList.insertAdjacentHTML("beforeend", allposts);
@@ -183,6 +187,7 @@ function renderArticlePage(newPost) {
     paginationContainer
   );
   paginationContainer.append(btnPrev, paginationList, btnNext);
+
   main.append(renderPhotoPost(), allPostsSection);
 
   return main;
